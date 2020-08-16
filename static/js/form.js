@@ -47,7 +47,8 @@ $(document).ready(function() {
 
 	$form.ajaxForm({
 		headers: {
-	        "Access-Control-Allow-Origin": "*"
+	        "Access-Control-Allow-Origin": "*",
+	        "Access-Control-Allow-Methods": "POST"
 	    },
 		dataType: 'json',
 		beforeSubmit: function() {
