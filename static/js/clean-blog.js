@@ -69,4 +69,14 @@
   refactorBrand(w);
   w.addListener(refactorBrand);
 
+  var on = 0;
+  $('.start').click(function() {
+    if (on) {
+      $('.header.masthead').css({'left':'100vw'});
+    } else {
+      $('.header.masthead').css({'left':'0'});
+    }
+    on = !on;
+  })
+
 })(jQuery); // End of use strict

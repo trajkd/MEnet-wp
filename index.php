@@ -17,6 +17,7 @@
   <link href="/wp-content/themes/MEnet-wp/static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+  <link href="//db.onlinewebfonts.com/c/7f0bd87d173a5d980ef018411a95686a?family=BlairMdITC+TT" rel="stylesheet" type="text/css"/>
 
   <!-- Custom styles for this template -->
   <link href="/wp-content/themes/MEnet-wp/static/css/clean-blog.css" rel="stylesheet">
@@ -70,17 +71,23 @@
     <!-- Page Header -->
     <header class="masthead">
       <div class="overlay particle-network-animation"></div>
+      <div class="overlay particle-network-animation exploratory"></div>
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
             <div class="site-heading">
               <h1>ME net</h1>
-              <span class="subheading"><p><strong>Your idea is a valid one</strong></p> In my ⭕️ netWork you will find collaboration and brainstorming to achieve it</span>
+              <span class="subheading"><p><strong>Your idea is a valid one</strong></p> Inside <span class="blair"><span class="m">M</span>E netWork</span> you will find collaboration and brainstorming to achieve it</span>
+              <p><button class="btn btn-primary start">Explore</button></p>
             </div>
           </div>
         </div>
       </div>
     </header>
+
+    <div class="exploration" style="display: none;">
+      <div class="overlay particle-network-animation"></div>
+    </div>
 
     <div class="container" id="blogposts">
         <div class="row" data-aos="slide-up">

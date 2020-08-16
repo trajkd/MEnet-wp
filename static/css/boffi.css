@@ -4574,17 +4574,17 @@ html.desktop #search-btn:hover svg {
     transform-origin: center center;
 }
 .fa-angle-up {
-    -webkit-text-stroke: 5px #fafafa;
+    -webkit-text-stroke: 5px white;
     font-size: 50px;
     margin-top: -14px;
 }
 .fa-angle-down {
-    -webkit-text-stroke: 5px #fafafa;
+    -webkit-text-stroke: 5px white;
     font-size: 50px;
     margin-top: -5px;
 }
 .fa-angle-left {
-    -webkit-text-stroke: 5px #fafafa;
+    -webkit-text-stroke: 5px white;
     font-size: 50px;
     margin-top: -5px;
 }

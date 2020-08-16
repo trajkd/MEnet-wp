@@ -779,3 +779,30 @@ $duration: 25s;
     margin-left: 96px;
   }
 }
+
+.blair {
+  font-family: 'BlairMdITC TT';
+  margin-bottom: -5px;
+}
+
+.m {
+  margin-bottom: -4.5px;
+  margin-right: -8px;
+  z-index: 2;
+  position: relative;
+}
+
+.start {
+  position: relative;
+  z-index: 4;
+}
+
+header.masthead .exploratory {
+  z-index: 3;
+  min-width: 100vw;
+  max-width: 100vw;
+  left: -100vw;
+  background-color: white;
+  opacity: 1;
+  transition: all 1s;
+}
