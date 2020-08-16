@@ -790,6 +790,7 @@ $duration: 25s;
   margin-right: -8px;
   z-index: 2;
   position: relative;
+  text-shadow: none;
 }
 
 .start {
