@@ -64,9 +64,13 @@ $(document).ready(function() {
 		},
 		error: function(error) {
 			$loader.hide();
-			console.log(error);
-			$messageModalContent.removeClass("alert-success").addClass("alert-danger");
-			$messageModalContent.html("Failed to send the message...")
+			if (error["status"] == "200") {
+				$messageModalContent.removeClass("alert-danger").addClass("alert-success");
+				$messageModalContent.html("Message sent successfully!")
+			} else {
+				$messageModalContent.removeClass("alert-success").addClass("alert-danger");
+				$messageModalContent.html("Failed to send the message...")
+			}
 			$modal.modal("show");
 		}
 	});
