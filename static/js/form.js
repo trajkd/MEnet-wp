@@ -66,4 +66,10 @@ $(document).ready(function() {
 			$modal.modal("show");
 		}
 	});
+
+	$form.ajaxSubmit({
+	    headers: {
+	        "Access-Control-Allow-Origin": "*"
+	    }
+	});
 })
