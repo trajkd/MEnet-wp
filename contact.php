@@ -13,134 +13,137 @@
     <link href="/wp-content/themes/MEnet-wp/static/css/contact.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/4c0b3ae1d6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="/wp-content/themes/MEnet-wp/static/css/clean-blog.css">
+    <link rel="stylesheet" type="text/css" href="/wp-content/themes/MEnet-wp/static/css/boffi.css">
 </head>
 
 <body>
-    <div id="loader">
-        <div class="spinner">
-            <div class="rect1"></div>
-            <div class="rect2"></div>
-            <div class="rect3"></div>
-            <div class="rect4"></div>
-            <div class="rect5"></div>
-        </div>
-    </div>
-    <nav class="navbar navbar-light navbar-expand-lg fixed-top" id="mainNav">
-        <div class="container"><a class="navbar-brand" href="/">MEnet</a><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="/">Home</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="/about/">About</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="/">Blog</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="/contact/">Contact</a></li>
-                </ul>
+    <div id="sidebar-section-peripherial">
+        <?php get_sidebar(); ?>
+        <div id="loader">
+            <div class="spinner">
+                <div class="rect1"></div>
+                <div class="rect2"></div>
+                <div class="rect3"></div>
+                <div class="rect4"></div>
+                <div class="rect5"></div>
             </div>
         </div>
-    </nav>
-    <header class="masthead link-masthead" style="background-image:url('/wp-content/themes/MEnet-wp/static/img/contact-bg.jpg');">
-        <div class="overlay"></div>
+        <nav class="navbar navbar-light navbar-expand-lg fixed-top" id="mainNav">
+            <div class="container"><a class="navbar-brand" href="/">MEnet</a><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="/">Home</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="/about/">About</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="/">Blog</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="/contact/">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <header class="masthead link-masthead" style="background-image:url('/wp-content/themes/MEnet-wp/static/img/contact-bg.jpg');">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 col-lg-8 mx-auto">
+                        <div class="site-heading">
+                            <h1>Contact Us</h1><span class="subheading">Have questions? We are open to improvements</span></div>
+                    </div>
+                </div>
+            </div>
+        </header>
         <div class="container">
             <div class="row">
                 <div class="col-md-10 col-lg-8 mx-auto">
-                    <div class="site-heading">
-                        <h1>Contact Us</h1><span class="subheading">Have questions? We are open to improvements</span></div>
+                    <p>Want to get in touch? Fill out the form below to send me a message and we will get back to you as soon as possible!</p>
+                    <form action="https://mindempathy.mooo.com/mail.php" method="post" id="contactForm" name="sentMessage" enctype="multipart/form-data">
+                        <div class="control-group">
+                            <div class="form-group floating-label-form-group controls"><label>Name</label><input class="form-control" type="text" id="name" name="name" placeholder="Name"><small class="form-text text-danger help-block"></small></div>
+                        </div>
+                        <div class="control-group">
+                            <div class="form-group floating-label-form-group controls"><label>Email Address</label><input class="form-control" type="email" id="email" name="email" placeholder="Email Address"><small class="form-text text-danger help-block"></small></div>
+                        </div>
+                        <div class="control-group">
+                            <div class="form-group floating-label-form-group controls"><label>Phone Number</label><input class="form-control" type="tel" id="phone" name="phone" placeholder="Phone Number"><small class="form-text text-danger help-block"></small></div>
+                        </div>
+                        <div class="control-group">
+                            <div class="form-group floating-label-form-group controls mb-3"><label>Message</label><textarea class="form-control" id="message" name="message" data-validation-required-message="Please enter a message." placeholder="Message" rows="5"></textarea><small class="form-text text-danger help-block"></small></div>
+                        </div>
+                        <div class="control-group">
+                            <div class="form-group floating-label-form-group controls"><label>Image/File</label><input type="file" class="form-control-file" id="file" name="file[]" placeholder="Upload" multiple></input><small class="form-text text-danger help-block"></small></div>
+                        </div>
+                        <div id="success"></div>
+                        <div class="form-group"><button class="btn btn-primary btn-success" id="sendMessageButton" type="submit">Send</button></div>
+                    </form>
                 </div>
             </div>
         </div>
-    </header>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-lg-8 mx-auto">
-                <p>Want to get in touch? Fill out the form below to send me a message and I will get back to you as soon as possible!</p>
-                <form action="https://mindempathy.mooo.com/mail.php" method="post" id="contactForm" name="sentMessage" enctype="multipart/form-data">
-                    <div class="control-group">
-                        <div class="form-group floating-label-form-group controls"><label>Name</label><input class="form-control" type="text" id="name" name="name" placeholder="Name"><small class="form-text text-danger help-block"></small></div>
-                    </div>
-                    <div class="control-group">
-                        <div class="form-group floating-label-form-group controls"><label>Email Address</label><input class="form-control" type="email" id="email" name="email" placeholder="Email Address"><small class="form-text text-danger help-block"></small></div>
-                    </div>
-                    <div class="control-group">
-                        <div class="form-group floating-label-form-group controls"><label>Phone Number</label><input class="form-control" type="tel" id="phone" name="phone" placeholder="Phone Number"><small class="form-text text-danger help-block"></small></div>
-                    </div>
-                    <div class="control-group">
-                        <div class="form-group floating-label-form-group controls mb-3"><label>Message</label><textarea class="form-control" id="message" name="message" data-validation-required-message="Please enter a message." placeholder="Message" rows="5"></textarea><small class="form-text text-danger help-block"></small></div>
-                    </div>
-                    <div class="control-group">
-                        <div class="form-group floating-label-form-group controls"><label>Image/File</label><input type="file" class="form-control-file" id="file" name="file[]" placeholder="Upload" multiple></input><small class="form-text text-danger help-block"></small></div>
-                    </div>
-                    <div id="success"></div>
-                    <div class="form-group"><button class="btn btn-primary btn-success" id="sendMessageButton" type="submit">Send</button></div>
-                </form>
-            </div>
-        </div>
-    </div>
 
-    <div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="messageModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="messageModalLabel">Info</h5>
-                    <img class="paperplane" src="/wp-content/themes/MEnet-wp/static/img/paperplane.svg" alt="Paper Plane">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div id="messageModalContent" class="alert alert-success">
-
+        <div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="messageModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="messageModalLabel">Info</h5>
+                        <img class="paperplane" src="/wp-content/themes/MEnet-wp/static/img/paperplane.svg" alt="Paper Plane">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    <div class="modal-body">
+                        <div id="messageModalContent" class="alert alert-success">
+
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <hr>
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-md-10 mx-auto">
-            <ul class="list-inline text-center">
-              <li class="list-inline-item">
-                <a href="https://twitter.com/MindEmpathyNET">
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="https://www.linkedin.com/company/me-net-mind-empathy-networking/">
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="mailto:hello@mindempathy.net">
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-            </ul>
+        <hr>
+        <footer>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 col-md-10 mx-auto">
+                <ul class="list-inline text-center">
+                  <li class="list-inline-item">
+                    <a href="https://twitter.com/MindEmpathyNET">
+                      <span class="fa-stack fa-lg">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                      </span>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="https://www.linkedin.com/company/me-net-mind-empathy-networking/">
+                      <span class="fa-stack fa-lg">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                      </span>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="mailto:hello@mindempathy.net">
+                      <span class="fa-stack fa-lg">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
 
-      <div class="container copyright">
-        <div class="row">
-          <div class="col-lg-8 col-md-10 mx-auto">
-            <p class="copyright text-muted">Copyright &copy; ME net 2020</p>
+          <div class="container copyright">
+            <div class="row">
+              <div class="col-lg-8 col-md-10 mx-auto">
+                <p class="copyright text-muted">Copyright &copy; ME net 2020</p>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </footer>
-
+        </footer>
+    </div>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="/wp-content/themes/MEnet-wp/static/vendor/jquery/jquery.min.js"></script>
@@ -150,6 +153,7 @@
     <script src="/wp-content/themes/MEnet-wp/static/bootstrap/js/bootstrap.min.js"></script>
     <script src="/wp-content/themes/MEnet-wp/static/js/clean-blog.js"></script>
     <script src="/wp-content/themes/MEnet-wp/static/js/form.js"></script>
+    <script src="/wp-content/themes/MEnet-wp/static/js/sidebar.js"></script>
 </body>
 
 </html>

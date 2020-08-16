@@ -6620,12 +6620,12 @@ html.desktop #dealers-filters_reset-container label:hover {
     font-family: "object-fit: cover";
     object-fit: cover;
 }
-.careers .careers__position-label,
+/*.careers .careers__position-label,
 .video-js,
 form .form-control {
     font-weight: 400;
     font-family: HelveticaNeueLTCYR-Roman, Arial, sans-serif;
-}
+}*/
 .video-js {
     top: 0;
     color: #fff;
@@ -6890,7 +6890,7 @@ html.desktop .video-js .vjs-big-play-button:hover {
     -ms-flex-pack: center;
     -ms-flex-align: center;
 }
-.design-week-form .restricted-container-fluid .container-fluid > .row > *,
+/*.design-week-form .restricted-container-fluid .container-fluid > .row > *,
 .videoplayer-overlay .videoplayer-overlay__close-btn::after,
 form .form__privacy-wrapper a,
 form select.form-control {
@@ -6899,7 +6899,7 @@ form select.form-control {
     z-index: auto;
     visibility: inherit;
     box-sizing: border-box;
-}
+}*/
 .videoplayer-overlay .videoplayer-overlay__close-btn::after {
     position: relative;
     top: 0;
@@ -7153,14 +7153,14 @@ form .form__accept-cookies-cta {
     font-size: 12px;
     line-height: 1.5;
 }
-form .form-group label,
+/*form .form-group label,
 form .ui-checkboxradio-label.ui-checkboxradio-radio-label {
     font-size: 12px;
     line-height: 1;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-}
+}*/
 form.cookies-disabled .form__accept-cookies-cta {
     display: block;
     color: #888;
@@ -7228,7 +7228,7 @@ form .ui-checkboxradio-label.ui-checkboxradio-radio-label .ui-checkboxradio-icon
     background: 0 0;
     background-image: none !important;
 }
-form .form-group {
+/*form .form-group {
     margin-bottom: 0;
 }
 form .form-group label {
@@ -7431,7 +7431,7 @@ form .form__privacy-wrapper .form-subscription__privacy-fieldset label {
     text-align: left;
     white-space: normal;
     line-height: 1.5;
-}
+}*/
 .design-week-form .design-week-form__topic,
 .newsletter-form .newsletter-form__topic {
     white-space: nowrap;

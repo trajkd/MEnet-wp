@@ -13,6 +13,7 @@ body {
 p {
   line-height: 1.5;
   margin: 30px 0;
+  color: #343a40;
 }
 
 p a {
@@ -27,7 +28,7 @@ h5,
 h6 {
   font-weight: 800;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: #db0000;
+  color: #ff0007;
 }
 
 a {
@@ -37,7 +38,7 @@ a {
 
 /* Change this for hover color of social buttons */
 a:focus, a:hover {
-  color: #db0000;
+  color: #ff0007;
 }
 
 blockquote {
