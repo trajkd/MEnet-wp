@@ -64,6 +64,7 @@ $(document).ready(function() {
 		},
 		error: function(error) {
 			$loader.hide();
+			cconsole.log(error);
 			$messageModalContent.removeClass("alert-success").addClass("alert-danger");
 			$messageModalContent.html("Failed to send the message...")
 			$modal.modal("show");
