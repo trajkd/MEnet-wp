@@ -46,6 +46,9 @@ $(document).ready(function() {
 	});
 
 	$form.ajaxForm({
+		headers: {
+	        "Access-Control-Allow-Origin": "*"
+	    },
 		dataType: 'json',
 		beforeSubmit: function() {
 			if(!$form.valid()) {
@@ -65,11 +68,5 @@ $(document).ready(function() {
 			$messageModalContent.html("Failed to send the message...")
 			$modal.modal("show");
 		}
-	});
-
-	$form.ajaxSubmit({
-	    headers: {
-	        "Access-Control-Allow-Origin": "*"
-	    }
 	});
 })
