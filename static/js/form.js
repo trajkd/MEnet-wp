@@ -45,35 +45,28 @@ $(document).ready(function() {
 		}
 	});
 
-	$form.bind('submit', function (e) {
-        $.ajax({
-        	headers: {
-		        "Access-Control-Allow-Origin": "*"
-		    },
-            type: "POST",
-            url: "http://34.214.1.191/mail.php",
-            data: $form.serialize(),
-            dataType: "json",
-            beforeSubmit: function() {
-				if(!$form.valid()) {
-					return false;
-				}
-				$loader.show();
-			},
-            success: function(res) {
-				$loader.hide();
-				$messageModalContent.removeClass("alert-danger").addClass("alert-success");
-				$messageModalContent.html("Message sent successfully!")
-				$modal.modal("show");
-            },
-			error: function(error) {
-				$loader.hide();
-				$messageModalContent.removeClass("alert-success").addClass("alert-danger");
-				$messageModalContent.html("Failed to send the message...")
-				$modal.modal("show");
+	$form.ajaxForm({
+		headers: {
+	        "Access-Control-Allow-Origin": "*"
+	    },
+		dataType: 'json',
+		beforeSubmit: function() {
+			if(!$form.valid()) {
+				return false;
 			}
-        });
-        e.preventDefault();
-        return false;
+			$loader.show();
+		},
+		success: function(res) {
+			$loader.hide();
+			$messageModalContent.removeClass("alert-danger").addClass("alert-success");
+			$messageModalContent.html("Message sent successfully!")
+			$modal.modal("show");
+		},
+		error: function(error) {
+			$loader.hide();
+			$messageModalContent.removeClass("alert-success").addClass("alert-danger");
+			$messageModalContent.html("Failed to send the message...")
+			$modal.modal("show");
+		}
 	});
 })
