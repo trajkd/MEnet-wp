@@ -46,12 +46,13 @@ $(document).ready(function() {
 	});
 
 	$form.bind('submit', function (e) {
-        $form.ajaxForm({
+        $.ajax({
         	headers: {
 		        "Access-Control-Allow-Origin": "*"
 		    },
             type: "POST",
             url: "http://34.214.1.191/mail.php",
+            data: $form.serialize(),
             dataType: "json",
             beforeSubmit: function() {
 				if(!$form.valid()) {
