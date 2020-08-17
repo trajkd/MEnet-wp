@@ -1,6 +1,33 @@
 (function($) {
   "use strict"; // Start of use strict
 
+  // Opera 8.0+
+  var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+
+  // Firefox 1.0+
+  var isFirefox = typeof InstallTrigger !== 'undefined';
+
+  // Safari 3.0+ "[object HTMLElementConstructor]" 
+  var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
+
+  // Internet Explorer 6-11
+  var isIE = /*@cc_on!@*/false || !!document.documentMode;
+
+  // Edge 20+
+  var isEdge = !isIE && !!window.StyleMedia;
+
+  // Chrome 1 - 79
+  var isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
+
+  if (isFirefox) {
+    $('ul.menu.uppercase').addClass('firefox');
+  }
+
+  if (isSafari) {
+    $('ul.menu.uppercase').addClass('safari');
+  }
+
+
   // Floating label headings for the contact form
   $("body").on("input propertychange", ".floating-label-form-group", function(e) {
     $(this).toggleClass("floating-label-form-group-with-value", !!$(e.target).val());
@@ -69,14 +96,31 @@
   refactorBrand(w);
   w.addListener(refactorBrand);
 
-  var on = 0;
-  $('.start').click(function() {
-    if (on) {
-      $('.header.masthead').css({'left':'100vw'});
+  $('.menu-item-24890').hover( 
+    function() { $('.ideasFull').removeClass('hidden'); },
+    function() { $('.ideasFull').addClass('hidden'); }
+  );
+
+  $('.menu-item-24892').hover( 
+    function() { $('.blogFull').removeClass('hidden'); },
+    function() { $('.blogFull').addClass('hidden'); }
+  );
+
+  $('.menu-item-24896').hover( 
+    function() { $('.projectsFull').removeClass('hidden'); },
+    function() { $('.projectsFull').addClass('hidden'); }
+  );
+
+  var visible = 0;
+  $('.start').click( function() {
+    if (visible) {
+      $('header.masthead').css('left','0');
+      $('header.masthead .exploratory').css('left','-200vw');
     } else {
-      $('.header.masthead').css({'left':'0'});
+      $('header.masthead').css('left','100vw');
+      $('header.masthead .exploratory').css('left','-100vw');
     }
-    on = !on;
-  })
+    visible = !visible
+  });
 
 })(jQuery); // End of use strict

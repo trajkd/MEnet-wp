@@ -20,8 +20,9 @@
   <link href="//db.onlinewebfonts.com/c/7f0bd87d173a5d980ef018411a95686a?family=BlairMdITC+TT" rel="stylesheet" type="text/css"/>
 
   <!-- Custom styles for this template -->
-  <link href="/wp-content/themes/MEnet-wp/static/css/clean-blog.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="/wp-content/themes/MEnet-wp/static/css/boffi.css">
+  <link rel="stylesheet" type="text/css" href="/wp-content/themes/MEnet-wp/static/css/header.css">
+  <link href="/wp-content/themes/MEnet-wp/static/css/clean-blog.css" rel="stylesheet">
 
 </head>
 
@@ -45,23 +46,16 @@
             </span>
           </span>
         </a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          Menu
-          <i class="fas fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="/">Home</a>
+        <div class="collapse navbar-collapse show" id="navbarResponsive">
+          <ul id="menu-top-central" class="menu horizontal uppercase" style="visibility: visible;">
+            <li id="menu-item-24890" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-24890">
+              <a href="/ideas/" data-menu-index="0" class="no-barba"><span class='hidden ideasFull Your'>Your</span><span class="redden">Ideas</span><span class='hidden ideasFull arevalidones'>&nbsp;are&nbsp;valid&nbsp;ones</span></a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/about/">About</a>
+            <li id="menu-item-24892" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-24892">
+              <a href="/blog/" data-menu-index="1" class="no-barba"><span class='hidden blogFull Inside'>Inside</span><span class="redden"><span class="ME">ME</span> net</span><span class='hidden blogFull Working'>Working</span></a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/">Blog</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/contact">Contact</a>
+            <li id="menu-item-24896" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-24896">
+              <a href="/projects/" data-menu-index="2" class="no-barba"><span></span><span class="redden">Projects</span> <span class='hidden projectsFull todiscover'>to&nbsp;discover</span></a>
             </li>
           </ul>
         </div>
@@ -77,13 +71,14 @@
           <div class="col-lg-8 col-md-10 mx-auto">
             <div class="site-heading">
               <h1>ME net</h1>
-              <span class="subheading"><p><strong>Your idea is a valid one</strong></p> Inside <span class="blair"><span class="m">M</span>E netWork</span> you will find collaboration and brainstorming to achieve it</span>
-              <p><button class="btn btn-primary start">Explore</button></p>
+              <span class="subheading"><p><strong>Your idea is a valid one</strong></p> Inside <span class="blair"><span class="ME MEblack">ME</span> netWork</span> you will find collaboration and brainstorming to achieve it</span>
             </div>
           </div>
         </div>
       </div>
     </header>
+
+    <p><button class="btn btn-primary start">Explore</button></p>
 
     <div class="exploration" style="display: none;">
       <div class="overlay particle-network-animation"></div>

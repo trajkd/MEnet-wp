@@ -261,7 +261,7 @@ img::-moz-selection {
   }
   span {
     display: inline-block;
-    overflow: hidden;
+    overflow: visible;
     transition: all 1s;
     -moz-transition: all 1s;
     -webkit-transition: all 1s;
@@ -269,9 +269,6 @@ img::-moz-selection {
   .mpathy { width: 5rem; }
   .ind { width: 2rem; }
   .reativity { width: 5.7rem; }
-  span.hidden {
-    width: 0px;
-  }
   .navbar {
     padding: .5rem 0;
   }
@@ -288,6 +285,45 @@ img::-moz-selection {
   #mainNav .navbar-nav > li.nav-item > a:focus, #mainNav .navbar-nav > li.nav-item > a:hover {
     color: rgba(255, 255, 255, 0.8);
   }
+}
+
+a span {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  transition: all 1s;
+  -moz-transition: all 1s;
+  -webkit-transition: all 1s;
+}
+.Your { width: 140px; }
+.arevalidones { width: 285px; }
+.Inside { width: 147px; }
+.Working { width: 180px; }
+.todiscover { width: 235px; }
+@media only screen and (max-width: 991px) {
+  .Your { width: 100px; }
+  .arevalidones { width: 253px; }
+  .Inside { width: 107px; }
+  .Working { width: 145px; }
+  .todiscover { width: 195px; }
+}
+@media only screen and (max-width: 500px) {
+  .Your { width: 65px; }
+  .arevalidones { width: 168px; }
+  .Inside { width: 75px; }
+  .Working { width: 92px; }
+  .todiscover { width: 129px; }
+  ul.menu.uppercase,
+  .sub-menu.uppercase {
+   font-size:14px;
+  }
+  .ME {
+    letter-spacing: -5px;
+    overflow: visible;
+  }
+}
+a span.hidden {
+  width: 0px;
 }
 
 @media only screen and (min-width: 992px) {
@@ -373,6 +409,7 @@ header.masthead {
 @media only screen and (max-width: 768px) {
   header.masthead {
     background-image: url('../img/logomobile.jpeg');
+    background-position: 50% -60%;
   }
 }
 
@@ -405,8 +442,10 @@ header.masthead .overlay {
 header.masthead .page-heading,
 header.masthead .post-heading,
 header.masthead .site-heading {
-  padding: 150px 0 150px;
+  padding: 180px 0 120px;
   color: #343a40;
+  top: 50px;
+  position: relative;
 }
 
 @media only screen and (min-width: 768px) {
@@ -778,6 +817,78 @@ $duration: 25s;
   #blogposts {
     margin-left: 96px;
   }
+
+  ul.menu {
+    text-shadow: 0 0 20px white, 0 0 20px white, 0 0 20px white, 0 0 20px white;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  #navbarResponsive {
+    display: flex;
+    justify-content: center;
+  }
+
+  ul.menu {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+}
+
+ul.menu.uppercase {
+  display: flex;
+  flex-direction: column;
+  font-family: 'BlairMdITC TT';
+  font-variant: small-caps;
+  font-weight: bold;
+}
+
+ul.menu.firefox {
+  letter-spacing: 0.81px;
+}
+
+ul.menu.safari {
+  letter-spacing: 2.8px;
+}
+
+@media only screen and (max-width: 500px) {
+  ul.menu.firefox {
+    letter-spacing: 1.95px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  ul.menu.safari {
+    letter-spacing: 2.3px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .menu-item:hover a span {
+    padding: 20px;
+    margin: -20px;
+  }
+}
+
+.menu-item a:hover {
+  text-decoration: none;
+}
+
+.ME {
+  color: #999;
+}
+
+.menu-item:hover .ME {
+  color: #ff0007;
+}
+
+.menu-item:hover .redden {
+  color: #ff0007;
+}
+
+.redden {
+  overflow: visible;
 }
 
 .blair {
@@ -785,16 +896,38 @@ $duration: 25s;
   margin-bottom: -5px;
 }
 
-.m {
-  margin-bottom: -5px;
-  margin-right: -8px;
-  z-index: 2;
-  position: relative;
-  text-shadow: none;
+@media only screen and (min-width: 501px) {
+  .ME {
+    letter-spacing: -9px;
+    overflow: visible;
+  }
+}
+
+.MEblack {
+  color: #343a40;
+}
+
+ul.menu.horizontal li {
+  display: flex;
+  margin-right: 0;
+  margin-bottom: 15px;
+}
+
+@media only screen and (max-width: 991px) {
+  ul.menu.horizontal li {
+    justify-content: center;
+  }
 }
 
 .start {
-  position: relative;
+  position: sticky;
+  width: 150px;
+  z-index: 4;
+  margin-top: -220px;
+  left: calc(50% - 55px);
+}
+
+#mainNav {
   z-index: 4;
 }
 
@@ -802,8 +935,13 @@ header.masthead .exploratory {
   z-index: 3;
   min-width: 100vw;
   max-width: 100vw;
-  left: -100vw;
+  left: -200vw;
   background-color: white;
   opacity: 1;
+  transition: all 1s;
+}
+
+header.masthead {
+  left: 0;
   transition: all 1s;
 }
