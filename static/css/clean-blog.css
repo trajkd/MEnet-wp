@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'BlairMdITC TT';
+  src: url('/wp-content/themes/MEnet-wp/static/fonts/BlairMdITC-TT-Medium-Font.ttf') format('truetype');
+}
+
 /*!
  * Start Bootstrap - Clean Blog v5.0.5 (https://startbootstrap.com/template-overviews/clean-blog)
  * Copyright 2013-2019 Start Bootstrap
