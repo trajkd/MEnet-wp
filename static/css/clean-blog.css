@@ -478,7 +478,7 @@ header.masthead .site-heading .subheading {
   text-shadow: 0 0 20px white, 0 0 20px white, 0 0 20px white, 0 0 20px white;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 450px) {
   header.masthead .page-heading h1,
   header.masthead .site-heading h1 {
     font-size: 80px;
@@ -559,7 +559,7 @@ header.masthead .post-heading .meta a {
   color: #0085A1;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) {
   .post-preview > a > .post-title {
     font-size: 36px;
   }
@@ -875,10 +875,6 @@ ul.menu.safari {
   text-decoration: none;
 }
 
-.ME {
-  color: #999;
-}
-
 .menu-item:hover .ME {
   color: #ff0007;
 }
@@ -896,15 +892,33 @@ ul.menu.safari {
   margin-bottom: -5px;
 }
 
-@media only screen and (min-width: 501px) {
-  .ME {
-    letter-spacing: -9px;
+.ME {
+  letter-spacing: -9px;
+  overflow: visible;
+}
+
+h1 .ME {
+  letter-spacing: -30px;
+  overflow: visible;
+}
+
+@media only screen and (max-width: 449px) {
+  h1 .ME {
+    letter-spacing: -19px;
     overflow: visible;
   }
 }
 
-.MEblack {
-  color: #343a40;
+@media only screen and (max-width: 500px) {
+  .menu-item .ME {
+      letter-spacing: -5px;
+      overflow: visible;
+  }
+}
+
+.copyright .ME {
+  letter-spacing: -4px;
+  overflow: visible;
 }
 
 ul.menu.horizontal li {
@@ -927,6 +941,12 @@ ul.menu.horizontal li {
   left: calc(50% - 55px);
 }
 
+@media only screen and (max-width: 768px) {
+  .start {
+      margin-top: -45px;
+  }
+}
+
 #mainNav {
   z-index: 4;
 }
@@ -944,4 +964,64 @@ header.masthead .exploratory {
 header.masthead {
   left: 0;
   transition: all 1s;
+}
+
+@media only screen and (max-width: 768px) {
+  header.masthead .site-heading {
+    padding-top: 45vw;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  header.masthead .site-heading {
+    padding-top: 44vw;
+  }
+}
+
+@media only screen and (max-width: 625px) {
+  header.masthead .site-heading {
+    padding-top: 43vw;
+  }
+}
+
+@media only screen and (max-width: 610px) {
+  header.masthead .site-heading {
+    padding-top: 42vw;
+  }
+}
+
+@media only screen and (max-width: 595px) {
+  header.masthead .site-heading {
+    padding-top: 41vw;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  header.masthead .site-heading {
+    padding-top: 40vw;
+  }
+}
+
+@media only screen and (max-width: 565px) {
+  header.masthead .site-heading {
+    padding-top: 39vw;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  header.masthead .site-heading {
+    padding-top: 38vw;
+  }
+}
+
+@media only screen and (max-width: 535px) {
+  header.masthead .site-heading {
+    padding-top: 37vw;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  header.masthead .site-heading {
+    padding-top: 35vw;
+  }
 }

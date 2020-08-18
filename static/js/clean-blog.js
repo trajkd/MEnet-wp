@@ -96,6 +96,18 @@
   refactorBrand(w);
   w.addListener(refactorBrand);
 
+  function forceNewline(x) {
+    if (x.matches) {
+      $('.subheading').html('<p><strong>Your idea is a valid one</strong></p> Inside <span class="blair"><span class="ME">ME</span> netWork</span> you will find collaboration and brainstorming <br>to achieve it');
+    } else {
+      $('.subheading').html('<p><strong>Your idea is a valid one</strong></p> Inside <span class="blair"><span class="ME">ME</span> netWork</span> you will find collaboration and brainstorming to achieve it');
+    }
+  };
+
+  var x = window.matchMedia("(min-width: 429px) and (max-width: 768px)");
+  forceNewline(x);
+  x.addListener(forceNewline);
+
   $('.menu-item-24890').hover( 
     function() { $('.ideasFull').removeClass('hidden'); },
     function() { $('.ideasFull').addClass('hidden'); }
@@ -116,9 +128,11 @@
     if (visible) {
       $('header.masthead').css('left','0');
       $('header.masthead .exploratory').css('left','-200vw');
+      $('.start').html("◀︎ Explore");
     } else {
       $('header.masthead').css('left','100vw');
       $('header.masthead .exploratory').css('left','-100vw');
+      $('.start').html("Go back ▶︎");
     }
     visible = !visible
   });

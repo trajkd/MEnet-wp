@@ -64,21 +64,21 @@
 
     <!-- Page Header -->
     <header class="masthead">
-      <div class="overlay particle-network-animation"></div>
+      <div class="overlay particle-network-animation home"></div>
       <div class="overlay particle-network-animation exploratory"></div>
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
             <div class="site-heading">
-              <h1>ME net</h1>
-              <span class="subheading"><p><strong>Your idea is a valid one</strong></p> Inside <span class="blair"><span class="ME MEblack">ME</span> netWork</span> you will find collaboration and brainstorming to achieve it</span>
+              <h1 class="blair"><span class="ME">ME</span> net</h1>
+              <span class="subheading"><p><strong>Your idea is a valid one</strong></p> Inside <span class="blair"><span class="ME">ME</span> netWork</span> you will find collaboration and brainstorming to achieve it</span>
             </div>
           </div>
         </div>
       </div>
     </header>
 
-    <p><button class="btn btn-primary start">Explore</button></p>
+    <p><button class="btn btn-primary start">◀︎ Explore</button></p>
 
     <div class="exploration" style="display: none;">
       <div class="overlay particle-network-animation"></div>
@@ -143,7 +143,7 @@
     <div class="container copyright">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <p class="copyright text-muted">Copyright &copy; ME net 2020</p>
+          <p class="copyright text-muted">Copyright &copy; <span class="blair"><span class="ME">ME</span> net</span> <?php echo currentYear(); ?></p>
         </div>
       </div>
     </div>
