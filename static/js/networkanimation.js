@@ -363,6 +363,7 @@ pna = new ParticleNetworkAnimation();	pna.init($('.particle-network-animation')[
     var linkXY = {};
     var linkWidths = {};
     var copyNum = {};
+    var currentCopy = "";
     for(var i = 0; i < labels.length; i++) {
 		copyNum[labels[i]] = 0;
 	}
@@ -415,7 +416,7 @@ pna = new ParticleNetworkAnimation();	pna.init($('.particle-network-animation')[
 	var hoveringCopy = false;
 	function hoveredLink(x, y) {
 		for(var index = 0; index < Object.keys(linkXY).length; index++) {
-	  		if(x>=linkXY[Object.keys(linkXY)[index]][0] && x <= (linkXY[Object.keys(linkXY)[index]][0] + linkWidths[Object.keys(linkXY)[index].replace(/\d+/g, '')]) && y<=linkXY[Object.keys(linkXY)[index]][1] && y>= (linkXY[Object.keys(linkXY)[index]][1]-24)){
+	  		if(x>=linkXY[Object.keys(linkXY)[index]][0] && x <= (linkXY[Object.keys(linkXY)[index]][0] + linkWidths[Object.keys(linkXY)[index].replace(/\d+/g, '')]) && y<=linkXY[Object.keys(linkXY)[index]][1] && y>= (linkXY[Object.keys(linkXY)[index]][1]-40)){
 				return [Object.keys(linkXY)[index].replace(/\d+/g, ''), Object.keys(linkXY)[index]];
 			}
 	  	}
@@ -435,7 +436,6 @@ pna = new ParticleNetworkAnimation();	pna.init($('.particle-network-animation')[
 		[hovering, hoveringCopy] = hoveredLink(x, y);
 		if(hovering){
 			document.body.style.cursor = "pointer";
-			this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
 		}
 		else{
 			document.body.style.cursor = "";
@@ -449,26 +449,71 @@ pna = new ParticleNetworkAnimation();	pna.init($('.particle-network-animation')[
 		}
 	}
 
+	var step = 0;
+	var previousCopy = "";
 	Particle.prototype.draw = function() {
 		// Draw particle
 		this.ctx.beginPath();
 		this.ctx.fillStyle = this.particleColor;
 		this.ctx.globalAlpha = this.opacity;
 		this.ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
-		this.ctx.font = "40px BlairMdITC TT";
-		this.ctx.fillText(this.label, this.x+5, this.y-5);
+		this.ctx.font = 35+(this.radius-4)*5+"px BlairMdITC TT";
 		if(hoveringCopy){
-			document.body.style.cursor = "pointer";
-			this.ctx.fillStyle = '#343a40';
-			this.ctx.fillText(hovering, linkXY[hoveringCopy][0]+5, linkXY[hoveringCopy][1]-5);
-		}
-		this.ctx.fillStyle = this.particleColor;
+			if ((this.label+this.copy === hoveringCopy)) {
+				this.ctx.font = 35+(this.radius-4)*5+10+"px BlairMdITC TT";
+				this.ctx.fillStyle = '#ff0007';
+		    }
+	    }
+	    this.ctx.fillText(this.label, this.x+5, this.y-5);
+	    this.ctx.fill();
 		if(Object.keys(linkXY).length == 1) {
 			this.canvas.addEventListener("mousemove", e => this.on_mousemove(e), false);
 	    	this.canvas.addEventListener("click", e => this.on_click(e), false);
 	    }
-		this.ctx.fill();
 	};
+
+	// Fade in effect
+	// var step = 0;
+	// var previousCopy = "";
+	// Particle.prototype.draw = function() {
+	// 	// Draw particle
+	// 	this.ctx.beginPath();
+	// 	this.ctx.fillStyle = this.particleColor;
+	// 	this.ctx.globalAlpha = this.opacity;
+	// 	this.ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
+	// 	this.ctx.fill();
+	// 	this.ctx.font = 35+(this.radius-4)*5+"px BlairMdITC TT";
+	// 	if(hoveringCopy){
+	// 		if ((this.label+this.copy === hoveringCopy)) {
+	// 			if (!(hoveringCopy === previousCopy)) {
+	// 				step = 0;
+	// 			}
+	// 			console.log(step);
+	// 			var r = 219,
+	// 			g = 0,
+	// 			b = 0,
+	// 	        dr = (0 - r) / (50 - Math.min(step,49)),
+	// 	        dg = (0 - g) / (50 - Math.min(step,49)),
+	// 	        db = (0 - b) / (50 - Math.min(step,49));
+	// 			this.ctx.fillStyle = 'rgb(' + Math.round(r + dr * step) + ','
+ //                               + Math.round(g + dg * step) + ','
+ //                               + Math.round(b + db * step) + ')';
+ //                console.log(this.ctx.fillStyle)
+ //        		this.ctx.fillText(hoveringCopy.replace(/\d+/g, ''), this.x+5, this.y-5);
+ //        		step++;
+ //        		previousCopy = hoveringCopy;
+	// 	    } else {
+	// 			this.ctx.fillText(this.label, this.x+5, this.y-5);
+	// 	    }
+	//     } else {
+	//     	step = 0;
+	// 		this.ctx.fillText(this.label, this.x+5, this.y-5);
+	//     }
+	// 	if(Object.keys(linkXY).length == 1) {
+	// 		this.canvas.addEventListener("mousemove", e => this.on_mousemove(e), false);
+	//     	this.canvas.addEventListener("click", e => this.on_click(e), false);
+	//     }
+	// };
 
 	var ParticleNetwork = function(parent) {
 		this.options = {

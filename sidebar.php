@@ -91,12 +91,6 @@
                     </div> -->
 <div class="card">
 <div class="card-header" style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-<a id="news-btn" class="collapsed" href="/news" data-index="home" internal-route="">
-<?php esc_html_e( 'News', 'woocommerce' ); ?></a>
-</div>
-</div><!-- STORES BTN -->
-<div class="card">
-<div class="card-header" style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
 <a id="stores-btn" class="collapsed" href="/network" data-index="home" internal-route="">
 <?php esc_html_e( 'Network', 'woocommerce' ); ?></a>
 </div>
@@ -107,7 +101,7 @@
 <?php esc_html_e( 'People', 'woocommerce' ); ?></a>
 </div>
 </div><!-- CONTRACT BTN
-<!-- <div class="card">
+<div class="card">
 <div class="card-header" style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
 <a id="contract-btn" class="collapsed" href="/contract" data-index="home" internal-route="">
 Contract</a>
