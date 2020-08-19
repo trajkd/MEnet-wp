@@ -32,7 +32,7 @@
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
         <a class="navbar-brand" href="/">
-          <span>Mind Empathy netWorking</span>
+          <span id="fulltitle">Mind Empathy netWorking</span>
           <span class='tagline'>
             <span>
               <span class='bracket'>\([\)</span>

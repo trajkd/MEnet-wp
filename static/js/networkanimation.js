@@ -412,13 +412,14 @@ pna = new ParticleNetworkAnimation();	pna.init($('.particle-network-animation')[
 	//check if the mouse is over the link and change cursor style
 	//is the mouse over the link?
 	var hovering = false;
+	var hoveringCopy = false;
 	function hoveredLink(x, y) {
 		for(var index = 0; index < Object.keys(linkXY).length; index++) {
 	  		if(x>=linkXY[Object.keys(linkXY)[index]][0] && x <= (linkXY[Object.keys(linkXY)[index]][0] + linkWidths[Object.keys(linkXY)[index].replace(/\d+/g, '')]) && y<=linkXY[Object.keys(linkXY)[index]][1] && y>= (linkXY[Object.keys(linkXY)[index]][1]-24)){
-				return Object.keys(linkXY)[index].replace(/\d+/g, '');
+				return [Object.keys(linkXY)[index].replace(/\d+/g, ''), Object.keys(linkXY)[index]];
 			}
 	  	}
-	  	return false;
+	  	return [false, false];
 	}
 	Particle.prototype.on_mousemove = function (ev) {
 		var x, y;
@@ -431,9 +432,10 @@ pna = new ParticleNetworkAnimation();	pna.init($('.particle-network-animation')[
 		x-=this.canvas.offsetLeft;
 		y-=this.canvas.offsetTop;
 
-		hovering = hoveredLink(x, y);
+		[hovering, hoveringCopy] = hoveredLink(x, y);
 		if(hovering){
 			document.body.style.cursor = "pointer";
+			this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
 		}
 		else{
 			document.body.style.cursor = "";
@@ -454,8 +456,13 @@ pna = new ParticleNetworkAnimation();	pna.init($('.particle-network-animation')[
 		this.ctx.globalAlpha = this.opacity;
 		this.ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
 		this.ctx.font = "40px BlairMdITC TT";
-		var currentLabel = this.label;
-		this.ctx.fillText(currentLabel, this.x+5, this.y-5);
+		this.ctx.fillText(this.label, this.x+5, this.y-5);
+		if(hoveringCopy){
+			document.body.style.cursor = "pointer";
+			this.ctx.fillStyle = '#343a40';
+			this.ctx.fillText(hovering, linkXY[hoveringCopy][0]+5, linkXY[hoveringCopy][1]-5);
+		}
+		this.ctx.fillStyle = this.particleColor;
 		if(Object.keys(linkXY).length == 1) {
 			this.canvas.addEventListener("mousemove", e => this.on_mousemove(e), false);
 	    	this.canvas.addEventListener("click", e => this.on_click(e), false);
