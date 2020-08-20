@@ -1180,11 +1180,11 @@ button.mdc-card__action--icon:hover {
 .mdc-layout-grid {
   position: relative;
   top: 200px;
+  height: 100vh;
 }
 
 @media only screen and (min-width: 992px) {
   .mdc-layout-grid {
     left: 96px;
-    height: 100vh;
   }
 }
