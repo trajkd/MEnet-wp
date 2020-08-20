@@ -49,7 +49,7 @@
                   <div id="menu-content__level-1-accordion" role="tablist" aria-multiselectable="true"><!-- BRAND BTN -->
                     <div class="card">
                       <div class="card-header" role="tab" id="headingTwo" style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-                        <a id="brand-btn" class="collapsed" href="/aboutme">About <span class="ME">ME</span></a>
+                        <a id="brand-btn" class="collapsed" href="/aboutme">About&nbsp;&nbsp;<span class="ME">ME</span></a>
                       </div><!-- <div id="brand-collapse" class="collapse" role="tabpanel">
                         <div class="card-block">
                           <div class="list-group">
@@ -145,7 +145,7 @@ Contract</a>
               <a href="/ideas/" data-menu-index="0" class="no-barba"><span class='hidden ideasFull Your'>Your</span><span class="redden">Ideas</span><span class='hidden ideasFull arevalidones'>&nbsp;are&nbsp;valid&nbsp;ones</span></a>
             </li>
             <li id="menu-item-24892" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-24892">
-              <a href="/blog/" data-menu-index="1" class="no-barba"><span class='hidden blogFull Inside'>Inside</span><span class="redden"><span class="ME">ME</span> net</span><span class='hidden blogFull Working'>Working</span></a>
+              <a href="/blog/" data-menu-index="1" class="no-barba"><span class='hidden blogFull Inside'>Inside</span><span class="redden"><span class="ME">ME</span>&nbsp;&nbsp;net</span><span class='hidden blogFull Working'>Working</span></a>
             </li>
             <li id="menu-item-24896" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-24896">
               <a href="/projects/" data-menu-index="2" class="no-barba"><span></span><span class="redden">Projects</span> <span class='hidden projectsFull todiscover'>to&nbsp;discover</span></a>

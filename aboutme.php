@@ -12,8 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="/wp-content/themes/MEnet-wp/static/css/dipaolo.css">
 	<link rel="stylesheet" type="text/css" href="/wp-content/themes/MEnet-wp/static/css/dipaolo2.css">
   <link rel="stylesheet" type="text/css" href="/wp-content/themes/MEnet-wp/static/css/header.css">
-  <link rel="stylesheet" type="text/css" href="/wp-content/themes/MEnet-wp/static/css/header.css">
-	<link rel="stylesheet" type="text/css" href="/wp-content/themes/MEnet-wp/static/css/clean-blog.css">
+  <link href="/wp-content/themes/MEnet-wp/static/css/clean-blog.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="/wp-content/themes/MEnet-wp/static/css/lago.css">
 	<link rel="stylesheet" type="text/css" href="/wp-content/themes/MEnet-wp/static/css/lago-style.css">
 	<script src="/wp-content/themes/MEnet-wp/static/js/main.js"></script>
@@ -37,6 +36,7 @@
     </div>
   </div>
 <script src="/wp-content/themes/MEnet-wp/static/js/jquery.js"></script>
+<script src="/wp-content/themes/MEnet-wp/static/js/clean-blog.js"></script>
 <script src="/wp-content/themes/MEnet-wp/static/js/sidebar.js"></script>
 </body>
 </html>
