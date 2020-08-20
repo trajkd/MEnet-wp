@@ -343,7 +343,7 @@ a span.hidden {
   #mainNav.is-fixed {
     /* when the user scrolls down, we hide the header right above the viewport */
     position: fixed;
-    top: -112px;
+    top: -179px;
     -webkit-transition: -webkit-transform 0.2s;
     transition: -webkit-transform 0.2s;
     transition: transform 0.2s;
@@ -391,7 +391,7 @@ header.masthead {
 
 #menu-bar, #menu {
   position: sticky;
-  top: 0;
+  bottom: 0;
   left: 0;
 }
 
@@ -945,7 +945,7 @@ ul.menu.horizontal li {
 .start {
   position: sticky;
   width: 150px;
-  z-index: 4;
+  z-index: 3;
   margin-top: -220px;
   left: calc(50% - 55px);
 }
@@ -958,6 +958,10 @@ ul.menu.horizontal li {
 
 #mainNav {
   z-index: 4;
+}
+
+button.close-menu-btn:hover {
+  color: #4a4a4a;
 }
 
 header.masthead .exploratory {
@@ -973,6 +977,12 @@ header.masthead .exploratory {
 header.masthead {
   left: 0;
   transition: all 1s;
+}
+
+@media only screen and (max-width: 991px) {
+  div .copyright {
+    padding-bottom: 80px;
+  }
 }
 
 @media only screen and (max-width: 768px) {

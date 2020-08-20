@@ -328,7 +328,7 @@ pna = new ParticleNetworkAnimation();	pna.init($('.particle-network-animation')[
 		this.ctx = this.canvas.getContext('2d');
 		this.adjustSize();
 		this.particleNetwork = new ParticleNetwork(this);
-		//this.bindUiActions();
+		// this.bindUiActions();
 
 		return this;
 	};
@@ -338,6 +338,7 @@ pna = new ParticleNetworkAnimation();	pna.init($('.particle-network-animation')[
 			// this.sizeContainer();
 			this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
 			this.sizeCanvas();
+			this.adjustSize();
 			this.particleNetwork.createParticles();
 		}.bind(this));
 	};
@@ -461,13 +462,14 @@ pna = new ParticleNetworkAnimation();	pna.init($('.particle-network-animation')[
 		if(hoveringCopy){
 			if ((this.label+this.copy === hoveringCopy)) {
 				this.ctx.font = 35+(this.radius-4)*5+10+"px BlairMdITC TT";
+				linkWidths[this.label] = this.ctx.measureText(this.label).width;
 				this.ctx.fillStyle = '#ff0007';
 		    }
 	    }
 	    this.ctx.fillText(this.label, this.x+5, this.y-5);
 	    this.ctx.fill();
 		if(Object.keys(linkXY).length == 1) {
-			this.canvas.addEventListener("mousemove", e => this.on_mousemove(e), false);
+			window.addEventListener("mousemove", e => this.on_mousemove(e), false);
 	    	this.canvas.addEventListener("click", e => this.on_click(e), false);
 	    }
 	};

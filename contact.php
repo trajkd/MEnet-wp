@@ -28,18 +28,6 @@
                 <div class="rect5"></div>
             </div>
         </div>
-        <nav class="navbar navbar-light navbar-expand-lg fixed-top" id="mainNav">
-            <div class="container"><a class="navbar-brand" href="/">MEnet</a><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="nav navbar-nav ml-auto">
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="/">Home</a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="/about/">About</a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="/">Blog</a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="/contact/">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
         <header class="masthead link-masthead" style="background-image:url('/wp-content/themes/MEnet-wp/static/img/contact-bg.jpg');">
             <div class="overlay"></div>
             <div class="container">

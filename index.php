@@ -28,38 +28,6 @@
 <body>
   <div id="sidebar-section-peripherial">
     <?php get_sidebar(); ?>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand" href="/">
-          <span id="fulltitle">Mind Empathy netWorking</span>
-          <span class='tagline'>
-            <span>
-              <span class='bracket'>\([\)</span>
-              <span class='initial'>E</span><span class='hidden nameFull mpathy'>mpathy</span>
-              <span>=</span>
-              <span class='initial'>m</span><span class='hidden nameFull ind'>ind</span>
-              <span class='initial'>c</span><span class='hidden nameFull reativity'>reativity</span><span>²</span>
-              <span class='bracket'>\(]\)</span>
-              <!-- \([ E = mc^2 ]\) -->
-            </span>
-          </span>
-        </a>
-        <div class="collapse navbar-collapse show" id="navbarResponsive">
-          <ul id="menu-top-central" class="menu horizontal uppercase" style="visibility: visible;">
-            <li id="menu-item-24890" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-24890">
-              <a href="/ideas/" data-menu-index="0" class="no-barba"><span class='hidden ideasFull Your'>Your</span><span class="redden">Ideas</span><span class='hidden ideasFull arevalidones'>&nbsp;are&nbsp;valid&nbsp;ones</span></a>
-            </li>
-            <li id="menu-item-24892" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-24892">
-              <a href="/blog/" data-menu-index="1" class="no-barba"><span class='hidden blogFull Inside'>Inside</span><span class="redden"><span class="ME">ME</span> net</span><span class='hidden blogFull Working'>Working</span></a>
-            </li>
-            <li id="menu-item-24896" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-24896">
-              <a href="/projects/" data-menu-index="2" class="no-barba"><span></span><span class="redden">Projects</span> <span class='hidden projectsFull todiscover'>to&nbsp;discover</span></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
 
     <!-- Page Header -->
     <header class="masthead">

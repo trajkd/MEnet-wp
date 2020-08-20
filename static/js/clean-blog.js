@@ -123,18 +123,21 @@
     function() { $('.projectsFull').addClass('hidden'); }
   );
 
-  var visible = 0;
+  var isExploratoryVisible = 0;
   $('.start').click( function() {
-    if (visible) {
+    if (isExploratoryVisible) {
+      setTimeout(function(){ $('#mainNav').css('background-color',''); }, 500);
       $('header.masthead').css('left','0');
       $('header.masthead .exploratory').css('left','-200vw');
       $('.start').html("◀︎ Explore");
     } else {
+      isExploratoryVisible
+      setTimeout(function(){ $('#mainNav').css('background-color','rgba(255, 255, 255, 0.9)'); }, 500);
       $('header.masthead').css('left','100vw');
       $('header.masthead .exploratory').css('left','-100vw');
       $('.start').html("Go back ▶︎");
     }
-    visible = !visible
+    isExploratoryVisible = !isExploratoryVisible
   });
 
 })(jQuery); // End of use strict
