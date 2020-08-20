@@ -1,5 +1,5 @@
 <?php
-    function currentYear(){
-        return date('Y');
-    }
+function currentYear(){
+    return date('Y');
+}
 ?>

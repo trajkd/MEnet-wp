@@ -131,13 +131,29 @@
       $('header.masthead .exploratory').css('left','-200vw');
       $('.start').html("◀︎ Explore");
     } else {
-      isExploratoryVisible
       setTimeout(function(){ $('#mainNav').css('background-color','rgba(255, 255, 255, 0.9)'); }, 500);
       $('header.masthead').css('left','100vw');
       $('header.masthead .exploratory').css('left','-100vw');
       $('.start').html("Go back ▶︎");
     }
-    isExploratoryVisible = !isExploratoryVisible
+    isExploratoryVisible = !isExploratoryVisible;
   });
+
+  var isExpanded = 0;
+  $('.mdc-card > .mdc-card__actions > .mdc-card__action-buttons > .expand').click( function() {
+    $(this).parent().parent().parent().find('.display').find('.summary').toggleClass('expanded');
+    if (isExpanded) {
+      $(this).find('.mdc-button__label').text('Expand');
+    } else {
+      $(this).find('.mdc-button__label').text('Collapse');
+    }
+    isExpanded = !isExpanded;
+  });
+
+  $('.heart').click( function() {
+    $(this).toggleClass('hearted');
+  });
+
+  $('.summary #ez-toc-container').css('display','none');
 
 })(jQuery); // End of use strict

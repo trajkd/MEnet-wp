@@ -7,11 +7,11 @@
       <i class="fas fa-angle-up"></i>
     </div>
     <div id="user-actions">
-      <a id="user" href="/customer/login">
+      <a id="user" href="/customer/login/">
         <i class="fas fa-user stroke-transparent"></i>
       </a>
-      <a id="order" href="">
-        <i class="fas fa-feather-alt stroke-transparent"></i>
+      <a id="order" href="/wiki/">
+        <i class="far fa-question-circle stroke-transparent"></i>
       </a>
       <a id="wishlist" href="">
         <i class="fas fa-heart stroke-transparent"></i>
