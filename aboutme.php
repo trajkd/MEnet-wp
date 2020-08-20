@@ -4,6 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width-device-width, initial-scale-1.0">
+  <link href="/wp-content/themes/MEnet-wp/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="/wp-content/themes/MEnet-wp/static/fonts/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="/wp-content/themes/MEnet-wp/static/css/boffi-libs.css">
 	<link rel="stylesheet" type="text/css" href="/wp-content/themes/MEnet-wp/static/css/boffi.css">
