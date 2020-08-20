@@ -1168,6 +1168,13 @@ button.mdc-card__action--icon:hover {
   font-size: 14px;
 }
 
+
+.rowContainer {
+    top: 200px;
+    left: 10px;
+    max-width: 85vw;
+}
+
 .mdc-layout-grid {
   position: relative;
   top: 200px;

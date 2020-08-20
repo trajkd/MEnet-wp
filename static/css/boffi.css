@@ -4915,10 +4915,16 @@ html.desktop #top-menu a:hover {
     overflow: hidden;
     overflow-x: visible;
     margin-left: 11px;
-    text-overflow: ellipsis;
+    text-overflow: hidden;
     white-space: nowrap;
     font-size: 25px;
     line-height: 1;
+    transition: all 0.5s;
+}
+@media (max-width: 634px) {
+    #home-btn {
+        font-size: 3.3vw;
+    }
 }
 #home-btn::after {
     position: absolute;
