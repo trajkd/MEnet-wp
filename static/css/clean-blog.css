@@ -1110,10 +1110,6 @@ header.masthead {
   transition: all 0.5s;
 }
 
-.expanded {
-  overflow: scroll;
-  height: 80vh;
-}
 
 @media only screen and (max-width: 1099px) {
   .mdc-card__media {
@@ -1122,6 +1118,11 @@ header.masthead {
   .summary {
     height: 77px;
   }
+}
+
+.summary.expanded {
+  overflow: scroll;
+  height: 80vh;
 }
 
 .mdc-icon-button, .mdc-card__action--icon, button.mdc-card__action--icon {
