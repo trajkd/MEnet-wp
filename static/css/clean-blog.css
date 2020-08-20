@@ -263,6 +263,7 @@ img::-moz-selection {
   .tagline {
     text-align: center;
     position: relative;
+    margin: 0 -10px;
   }
   span {
     display: inline-block;
