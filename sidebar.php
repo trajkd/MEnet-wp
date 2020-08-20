@@ -49,7 +49,7 @@
                   <div id="menu-content__level-1-accordion" role="tablist" aria-multiselectable="true"><!-- BRAND BTN -->
                     <div class="card">
                       <div class="card-header" role="tab" id="headingTwo" style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-                        <a id="brand-btn" class="collapsed" href="/aboutus">About <span class="ME">ME</span></a>
+                        <a id="brand-btn" class="collapsed" href="/aboutme">About <span class="ME">ME</span></a>
                       </div><!-- <div id="brand-collapse" class="collapse" role="tabpanel">
                         <div class="card-block">
                           <div class="list-group">
