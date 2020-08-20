@@ -1049,3 +1049,13 @@ header.masthead {
     padding-top: 35vw;
   }
 }
+
+.rowContainer {
+  position: relative;
+  top: 200px;
+  left: 96px;
+}
+
+.histoire {
+  margin-bottom: 200px;
+}
