@@ -67,7 +67,7 @@
     	                      </a>
     	                    </li>
                             <li class="list-inline-item">
-                              <a href="/contact">
+                              <a href="/contact/">
                                 <span class="fa-stack fa-lg">
                                   <i class="fas fa-circle fa-stack-2x"></i>
                                   <i class="fas fa-paper-plane fa-stack-1x fa-inverse"></i>
