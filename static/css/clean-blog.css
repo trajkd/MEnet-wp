@@ -1189,3 +1189,7 @@ button.mdc-card__action--icon:hover {
     left: 96px;
   }
 }
+
+.padded {
+  padding-top: 230px;
+}
