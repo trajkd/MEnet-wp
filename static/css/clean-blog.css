@@ -1059,3 +1059,10 @@ header.masthead {
 .histoire {
   margin-bottom: 200px;
 }
+
+@media only screen and (max-width: 991px) {
+  .rowContainer {
+    top: 150px;
+    left: 30px;
+  }
+}
