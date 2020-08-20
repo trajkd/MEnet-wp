@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title><?php the_title(); ?> - Contact us</title>
+    <title>Contact - <?php bloginfo( 'name' ) ?></title>
     <link rel="stylesheet" href="/wp-content/themes/MEnet-wp/static/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
@@ -18,17 +18,17 @@
 </head>
 
 <body>
+    <div id="loader">
+        <div class="spinner">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+        </div>
+    </div>
     <div id="sidebar-section-peripherial">
         <?php get_sidebar(); ?>
-        <div id="loader">
-            <div class="spinner">
-                <div class="rect1"></div>
-                <div class="rect2"></div>
-                <div class="rect3"></div>
-                <div class="rect4"></div>
-                <div class="rect5"></div>
-            </div>
-        </div>
         <header class="masthead link-masthead" style="background-image:url('/wp-content/themes/MEnet-wp/static/img/contact-bg.jpg');">
             <div class="overlay"></div>
             <div class="container">

@@ -11,7 +11,7 @@
         <i class="fas fa-user stroke-transparent"></i>
       </a>
       <a id="order" href="/wiki/">
-        <i class="far fa-question-circle stroke-transparent"></i>
+        <i class="far fa-question-circle"></i>
       </a>
       <a id="wishlist" href="">
         <i class="fas fa-heart stroke-transparent"></i>

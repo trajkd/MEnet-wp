@@ -4588,6 +4588,24 @@ html.desktop #search-btn:hover svg {
     font-size: 50px;
     margin-top: -5px;
 }
+.fa-question-circle {
+    -webkit-text-stroke: 2.5px white;
+    font-size: 37px;
+    margin-top: -10px;
+    margin-bottom: -2px;
+    top: 2px;
+    position: relative;
+    color: black;
+}
+.fa-question-circle:hover {
+    filter: invert(100%);
+    color: black;
+    background-color: white;
+    border-radius: 25px;
+    -webkit-text-stroke: 3.2px white;
+    font-size: 35px;
+    margin: -10px 1px 0;
+}
 @media (min-width: 992px) {
     #search-btn {
         top: auto;
