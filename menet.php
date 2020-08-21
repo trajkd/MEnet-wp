@@ -33,6 +33,7 @@
                           <h2><?php the_title(); ?></h2>
                           <hr>
                           <div id='map' style='width: 100%; height: 300px;'></div>
+                          <br>
                           <?php the_content(); ?>
 
         </div>
