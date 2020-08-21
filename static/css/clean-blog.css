@@ -1324,3 +1324,23 @@ ul.toc-box li:first-child {
 .mapboxgl-ctrl {
   display: none !important;
 }
+
+.histoire p .ME {
+  letter-spacing: -6px;
+}
+
+.histoire h2 .ME {
+  letter-spacing: -22px;
+}
+
+.histoire h2:first-child .ME {
+  letter-spacing: -25px;
+}
+
+.histoire h2 .ME {
+  letter-spacing: -22px;
+}
+
+.histoire h3 .ME {
+  letter-spacing: -14px;
+}
