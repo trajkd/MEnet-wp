@@ -92,9 +92,24 @@
     MathJax.typeset();
   };
 
+  var isTOCvisible = 1;
+  function showHideTOC(w) {
+    if (w.matches) {
+      $(".toc").css('right','-320px');
+      setTimeout(function() { $(".toc-box").addClass('hidden'); $(".toc").css('right','-290px'); }, 500);
+      isTOCvisible = 0;
+    } else {
+      $(".toc").css('right','-320px');
+      setTimeout(function() { $(".toc-box").removeClass('hidden'); $(".toc").css('right','3px'); }, 500);
+      isTOCvisible = 1;
+    }
+  }
+
   var w = window.matchMedia("(max-width: 991px)");
   refactorBrand(w);
   w.addListener(refactorBrand);
+  showHideTOC(w);
+  w.addListener(showHideTOC);
 
   function forceNewline(x) {
     if (x.matches) {
@@ -158,21 +173,17 @@
 
   $('.histoire').createTOC({title: "", insert: ".toc"});
 
-  var activated = null;
-  $(window).scroll(function() {
-    if (activated && !activated.hasClass('active')) {
-      activated.addClass('deactivating');
-      setTimeout(function() { activated.removeClass('deactivating'); }, 200);
+  $(".toc-box").on('click', function (e) {
+    if (e.offsetX < 8) {
+      if (isTOCvisible) {
+        $(".toc").css('right','-320px');
+        setTimeout(function() { $(".toc-box").addClass('hidden'); $(".toc").css('right','-290px'); }, 500);
+      } else {
+        $(".toc").css('right','-320px');
+        setTimeout(function() { $(".toc-box").removeClass('hidden'); $(".toc").css('right','3px'); }, 500);
+      }
+      isTOCvisible = !isTOCvisible;
     }
-    $(".wrap-toc .toc-box .toc-item").not(".wrap-toc .toc-box .toc-item.active").removeClass('activated');
-    $(".wrap-toc .toc-box .toc-item.active").addClass('activated');
-    activated = $(".wrap-toc .toc-box .toc-item.active");
-  });
-
-  $(".wrap-toc .toc-box .toc-item").on('click', function () {
-    var activated = $(".wrap-toc .toc-box .toc-item.active");
-    activated.addClass('deactivating');
-    setTimeout(function() { activated.removeClass('deactivating'); }, 200);
   });
 
 })(jQuery); // End of use strict

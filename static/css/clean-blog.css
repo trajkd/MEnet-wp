@@ -1219,7 +1219,7 @@ a.toc-item-link {
 }
 
 .wrap-toc .toc-box .toc-item.deactivating .toc-item-link {
-  margin-bottom: -35px;
+  margin-bottom: -32px;
 }
 
 .wrap-toc .toc-box .toc-item.activated:after {
@@ -1287,8 +1287,16 @@ a.toc-item-link {
 .toc {
   position: fixed;
   top: 200px;
-  right: 0;
-  width: 30%;
+  right: 3px;
+  width: 300px;
+  z-index: 3;
+  transition: all .5s;
+}
+
+.toc-box {
+  padding: 5px 0;
+  margin: 0; 
+  background: linear-gradient(90deg, white 277px, transparent 50px);
 }
 
 .toc div {
@@ -1313,12 +1321,31 @@ ul.toc-box li:first-child {
   font-family: 'BlairMdITC TT';
 }
 
+
 .ContentPage .staticContent_Wrapper .static_content h2:first-child {
   font-size: 70px;
 }
 
 .ContentPage .staticContent_Wrapper .static_content h3 {
   font-size: 40px;
+}
+
+@media only screen and (max-width: 991px) {
+  .ContentPage .staticContent_Wrapper .static_content h2:first-child {
+    font-size: 7vw;
+  }
+
+  .ContentPage .staticContent_Wrapper .static_content h2{
+    font-size: 5vw;
+  }
+
+  .ContentPage .staticContent_Wrapper .static_content h3 {
+    font-size: 3vw;
+  }
+
+  .ContentPage .staticContent_Wrapper .static_content p {
+    font-size: 15px;
+  }
 }
 
 .mapboxgl-ctrl {
@@ -1357,4 +1384,23 @@ ul.toc-box li:first-child {
   transition: all 0.3s;
   -moz-transition: all 0.3s;
   -webkit-transition: all 0.3s;
+}
+
+.toc-box:before {
+  content: '❯';
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: -20px;
+  height: 100%;
+  background-color: white;
+  font-size: 40px;
+  padding-left: 5px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.toc-box.hidden:before {
+  content: '❮';
 }

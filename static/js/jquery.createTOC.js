@@ -1,4 +1,4 @@
-; (function (window, $, undefined) {
+(function (window, $, undefined) {
     $.fn.createTOC = function (settings) {
         var option = $.extend({
             title: "目录",
@@ -40,15 +40,30 @@
         var isTakeOverByClick = false;
 
         // 事件委托，添加 click ，高亮当前点击项
-        $tocBox.on("click", ".toc-item", function (ev) {
-            // 设置为 true ，代表 点击事件 接管 高亮元素 的控制权
-            isTakeOverByClick = true;
+        function clickEvent(callback){
+            $tocBox.on("click", ".toc-item", function (ev) {
+                // 设置为 true ，代表 点击事件 接管 高亮元素 的控制权
+                isTakeOverByClick = true;
 
-            var $item = $(this);
-            var $itemSiblings = $item.siblings();
+                var $item = $(this);
+                var $itemSiblings = $item.siblings();
 
-            $itemSiblings.removeClass(ACTIVE_CLASS);
-            $item.addClass(ACTIVE_CLASS);
+                $itemSiblings.removeClass(ACTIVE_CLASS);
+                $item.addClass(ACTIVE_CLASS);
+                callback();
+            });
+        }
+
+        clickEvent( function() {
+            console.log(activated);
+            if (activated && !activated.hasClass('active')) {
+                activated.addClass('deactivating');
+                var deactivating = activated;
+                setTimeout(function() { deactivating.removeClass('deactivating'); }, 200);
+            }
+            $(".wrap-toc .toc-box .toc-item").not(".wrap-toc .toc-box .toc-item.active").removeClass('activated');
+            $(".wrap-toc .toc-box .toc-item.active").addClass('activated');
+            activated = $(".wrap-toc .toc-box .toc-item.active");
         });
 
         var headBox = document.createElement("div");
@@ -81,6 +96,7 @@
 
         // 滚动吸顶
 
+        var activated = null;
         $(window).scroll(function () {
             // IE6/7/8： 
             // 对于没有doctype声明的页面里可以使用  document.body.scrollTop 来获取 scrollTop高度 ； 
@@ -140,6 +156,18 @@
                     paddingLeft: CACHE_PADDING_LEFT,
                 });
             }
+
+            if (!activated) {
+                activated = $(".wrap-toc .toc-box .toc-item.active");
+            }
+            if (activated && !activated.hasClass('active')) {
+                activated.addClass('deactivating');
+                var deactivating = activated;
+                setTimeout(function() { deactivating.removeClass('deactivating'); }, 200);
+            }
+            $(".wrap-toc .toc-box .toc-item").not(".wrap-toc .toc-box .toc-item.active").removeClass('activated');
+            $(".wrap-toc .toc-box .toc-item.active").addClass('activated');
+            activated = $(".wrap-toc .toc-box .toc-item.active");
         });
 
     };

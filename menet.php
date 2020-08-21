@@ -49,14 +49,14 @@
 <script src="/wp-content/themes/MEnet-wp/static/js/jquery.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" crossorigin="anonymous"></script>
 <script src="/wp-content/themes/MEnet-wp/static/js/jquery.createTOC.js"></script>
-<script src="/wp-content/themes/MEnet-wp/static/js/clean-blog.js"></script>
 <script src="/wp-content/themes/MEnet-wp/static/js/sidebar.js"></script>
+<script src="/wp-content/themes/MEnet-wp/static/js/clean-blog.js"></script>
 <script>
 mapboxgl.accessToken = 'pk.eyJ1IjoiY2lhb2RlamFuIiwiYSI6ImNrZTN2dW9jOTBuN2cyc2xlYWI2MjRwcXYifQ.HlNsmr-JWqllSCMOYMkt2A';
 var map = new mapboxgl.Map({
 container: 'map',
 center: [-122.420679, 37.772537],
-style: 'mapbox://styles/mapbox/streets-v11'
+style: 'mapbox://styles/mapbox/light-v10'
 });
 </script>
 
