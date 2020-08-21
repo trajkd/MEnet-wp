@@ -156,4 +156,23 @@
 
   $('.summary #ez-toc-container').css('display','none');
 
+  $('.histoire').createTOC({title: "", insert: ".toc"});
+
+  var activated = null;
+  $(window).scroll(function() {
+    if (activated && !activated.hasClass('active')) {
+      activated.addClass('deactivating');
+      setTimeout(function() { activated.removeClass('deactivating'); }, 200);
+    }
+    $(".wrap-toc .toc-box .toc-item").not(".wrap-toc .toc-box .toc-item.active").removeClass('activated');
+    $(".wrap-toc .toc-box .toc-item.active").addClass('activated');
+    activated = $(".wrap-toc .toc-box .toc-item.active");
+  });
+
+  $(".wrap-toc .toc-box .toc-item").on('click', function () {
+    var activated = $(".wrap-toc .toc-box .toc-item.active");
+    activated.addClass('deactivating');
+    setTimeout(function() { activated.removeClass('deactivating'); }, 200);
+  });
+
 })(jQuery); // End of use strict
