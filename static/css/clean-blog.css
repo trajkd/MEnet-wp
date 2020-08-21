@@ -1344,3 +1344,11 @@ ul.toc-box li:first-child {
 .histoire h3 .ME {
   letter-spacing: -14px;
 }
+
+.toc-box .toc-H2 .ME {
+  letter-spacing: -7px;
+}
+
+.toc-box .toc-H3 .ME {
+  letter-spacing: -5px;
+}
