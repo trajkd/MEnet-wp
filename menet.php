@@ -26,13 +26,13 @@
 <body>
   <div id="sidebar-section-peripherial">
     <?php get_sidebar(); ?>
-    <div id='map' style='width: 54vw; height: 300px; top: 200px; left: 190px;'></div>
     <div class="rowContainer ContentPage" id="container_15714">
       <div class="staticContent_Wrapper wrapper_without_nav">
         <div class="static_content histoire">
 
                           <h2><?php the_title(); ?></h2>
                           <hr>
+                          <div id='map' style='width: 100%; height: 300px;'></div>
                           <?php the_content(); ?>
 
         </div>
