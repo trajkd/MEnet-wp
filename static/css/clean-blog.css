@@ -1352,3 +1352,9 @@ ul.toc-box li:first-child {
 .toc-box .toc-H3 .ME {
   letter-spacing: -5px;
 }
+
+.toc-box a span {
+  transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+}
