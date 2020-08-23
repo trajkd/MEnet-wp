@@ -1361,10 +1361,6 @@ ul.toc-box li:first-child {
   letter-spacing: -6px;
 }
 
-.histoire h2 .ME {
-  letter-spacing: -22px;
-}
-
 .histoire h2:first-child .ME {
   letter-spacing: -25px;
 }
@@ -1383,6 +1379,24 @@ ul.toc-box li:first-child {
 
 .toc-box .toc-H3 .ME {
   letter-spacing: -5px;
+}
+
+@media only screen and (max-width: 991px) {
+  .histoire p .ME {
+    letter-spacing: -0.8vw;
+  }
+
+  .histoire h2:first-child .ME {
+    letter-spacing: -2.5vw;
+  }
+
+  .histoire h2 .ME {
+    letter-spacing: -1.8vw;
+  }
+
+  .histoire h3 .ME {
+    letter-spacing: -1vw;
+  }
 }
 
 .toc-box a span {
