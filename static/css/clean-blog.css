@@ -17,8 +17,12 @@ body {
 
 p {
   line-height: 1.5;
-  margin: 0;
+  margin: 30px 0;
   color: #343a40;
+}
+
+.histoire p {
+  margin: 0;
 }
 
 p a {
