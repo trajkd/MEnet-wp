@@ -21,7 +21,7 @@ p {
   color: #343a40;
 }
 
-.histoire p {
+.ContentPage .staticContent_Wrapper .static_content p {
   margin: 0;
   padding: 5px 0;
 }
