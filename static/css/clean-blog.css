@@ -231,6 +231,7 @@ img::-moz-selection {
 }
 
 #mainNav .navbar-brand {
+  font-size: 20px;
   font-weight: 800;
   color: #343a40;
 }
@@ -277,9 +278,9 @@ img::-moz-selection {
     -moz-transition: all 1s;
     -webkit-transition: all 1s;
   }
-  .mpathy { width: 5rem; }
-  .ind { width: 2rem; }
-  .reativity { width: 5.7rem; }
+  .mpathy { width: 80px; }
+  .ind { width: 32px; }
+  .reativity { width: 91.2px; }
   .navbar {
     padding: .5rem 0;
   }
@@ -1193,6 +1194,7 @@ button.mdc-card__action--icon:hover {
 @media only screen and (min-width: 992px) {
   .mdc-layout-grid {
     left: 96px;
+    margin-right: 96px;
   }
 }
 
