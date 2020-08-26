@@ -154,15 +154,13 @@
     isExploratoryVisible = !isExploratoryVisible;
   });
 
-  var isExpanded = 0;
   $('.mdc-card > .mdc-card__actions > .mdc-card__action-buttons > .expand').click( function() {
     $(this).parent().parent().parent().find('.display').find('.summary').toggleClass('expanded');
-    if (isExpanded) {
+    if ($(this).find('.mdc-button__label').text() === 'Collapse') {
       $(this).find('.mdc-button__label').text('Expand');
     } else {
       $(this).find('.mdc-button__label').text('Collapse');
     }
-    isExpanded = !isExpanded;
   });
 
   $('.heart').click( function() {
