@@ -56,25 +56,6 @@ blockquote {
   color: #868e96;
 }
 
-@media only screen and (max-width: 768px) {
-
-  #mainNav .navbar-brand {
-    transition: font-size 1s;
-    font-size: 15px;
-  }
-
-  button.navbar-toggler {
-    display: inline-block;
-    float: left;
-    width: 100vw;
-  }
-
-  span.tagline {
-    display: inline-block;
-    float: right;
-  }
-}
-
 .error {
   color: #fb2822;
 }
@@ -182,14 +163,6 @@ blockquote {
   }
 }
 
-@media only screen and (max-width: 400px) {
-
-  #mainNav .navbar-brand {
-    transition:font-size 1s;
-    font-size: 10px;
-  }
-}
-
 .section-heading {
   font-size: 36px;
   font-weight: 700;
@@ -234,6 +207,33 @@ img::-moz-selection {
   font-size: 20px;
   font-weight: 800;
   color: #343a40;
+}
+
+@media only screen and (max-width: 400px) {
+
+  #mainNav .navbar-brand {
+    transition:font-size 1s;
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+
+  #mainNav .navbar-brand {
+    transition: font-size 1s;
+    font-size: 15px;
+  }
+
+  button.navbar-toggler {
+    display: inline-block;
+    float: left;
+    width: 100vw;
+  }
+
+  span.tagline {
+    display: inline-block;
+    float: right;
+  }
 }
 
 #mainNav .navbar-toggler {
