@@ -1,4 +1,3 @@
-<?php /* Template Name: Wiki */ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,17 +26,17 @@
 <body>
 	<div id="sidebar-section-peripherial">
     <?php get_sidebar(); ?>
-		<div class="mdc-layout-grid wiki-grid">
+		<div class="mdc-layout-grid">
 		  <div class="mdc-layout-grid__inner">
-				<?php $the_query = new WP_Query('post_type=wiki'); 
-				if ($the_query -> have_posts())
-			    while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
+				<?php 
+				if (have_posts())
+			    while (have_posts()) : the_post(); ?>
 		    <div class="mdc-layout-grid__cell">
 		      <div class="mdc-card">
 		    	<div class="display">
 		    	  <a href="<?php the_permalink() ?>">
 					<div class="mdc-card__primary-action">
-					  <div class="mdc-card__media mdc-card__media--square my-card__media" style="background-image: url('<?php if(get_the_post_thumbnail_url()) echo get_the_post_thumbnail_url(); else echo '/wp-content/themes/MEnet-wp/static/img/ikea.svg' ?>');"></div>
+					  <div class="mdc-card__media mdc-card__media--16-9 my-card__media" style="background-image: url('<?php if(get_the_post_thumbnail_url()) echo get_the_post_thumbnail_url(); else echo '/wp-content/themes/MEnet-wp/static/img/ikea-vari.svg' ?>');"></div>
 					</div>
 				  </a>
 				  <div class="summary">

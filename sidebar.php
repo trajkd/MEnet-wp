@@ -17,6 +17,44 @@
         <i class="fas fa-heart stroke-transparent"></i>
       </a>
     </div>
+    <div class="sidebar-container">
+      <div class="row">
+        <ul class="list-inline text-center">
+          <li class="list-inline-item">
+            <a href="https://twitter.com/MindEmpathyNET">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="https://www.linkedin.com/company/me-net-mind-empathy-networking/">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="/contact/">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-paper-plane fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="mailto:hello@mindempathy.net">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
     <a id="search-btn" href="/search" internal-route="">
       <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
         <g transform="translate(1 1)" stroke-width="2" stroke="#000" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
