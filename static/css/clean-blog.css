@@ -384,12 +384,53 @@ a {
 
 header.masthead {
   margin-bottom: 0;
-  background: no-repeat center center;
+  /*background: no-repeat center center;
   background-image: url('../img/logo.jpeg');
   background-attachment: scroll;
   position: relative;
-  background-size: cover;
+  background-size: cover;*/
   width: 100vw;
+  min-height: 100vh;
+}
+
+.main-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -250px 0 0 -226px;
+}
+
+.subheading {
+  position: relative;
+  z-index: 2;
+}
+
+.subheading1 {
+  position: absolute;
+}
+
+.subheading2 {
+  position: absolute;
+}
+
+.main nav.navbar {
+  display: none;
+}
+
+.main {
+  height: 100vh;
+}
+
+header.masthead .navbar-brand {
+  position: absolute;
+}
+
+header.masthead #navbarResponsive {
+  position: absolute;
+  top: 50%;
+  left: 115px;
+  margin-top: -51px;
+  z-index: 2;
 }
 
 #sidebar-section {
@@ -432,7 +473,6 @@ header.masthead .overlay {
   top: 0;
   left: 0;
   height: 100%;
-  width: 65vw;
   background-color: #ffffff00;
   opacity: 0.8;
   visibility: visible;
@@ -456,22 +496,14 @@ header.masthead .overlay {
 header.masthead .page-heading,
 header.masthead .post-heading,
 header.masthead .site-heading {
-  padding: 180px 0 120px;
+  padding: 0;
   color: #343a40;
-  top: 50px;
   position: relative;
-}
-
-@media only screen and (min-width: 768px) {
-  header.masthead .page-heading,
-  header.masthead .post-heading,
-  header.masthead .site-heading {
-    padding: 150px 0;
-  }
 }
 
 header.masthead .page-heading,
 header.masthead .site-heading {
+  height: 100vh;
   text-align: center;
 }
 

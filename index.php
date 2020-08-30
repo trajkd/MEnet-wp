@@ -26,31 +26,48 @@
 </head>
 
 <body>
-  <div id="sidebar-section-peripherial">
+  <div id="sidebar-section-peripherial" class="main">
     <?php get_sidebar(); ?>
     <!-- Page Header -->
     <header class="masthead">
       <div class="overlay particle-network-animation home"></div>
       <div class="overlay particle-network-animation exploratory"></div>
+      <div class="collapse navbar-collapse show" id="navbarResponsive">
+        <ul id="menu-top-central" class="menu horizontal uppercase" style="visibility: visible;">
+          <li id="menu-item-24890" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-24890">
+            <a href="/ideas/" data-menu-index="0" class="no-barba"><span class='hidden ideasFull Your'>Your</span><span class="redden">Ideas</span><span class='hidden ideasFull arevalidones'>&nbsp;are&nbsp;valid&nbsp;ones</span></a>
+          </li>
+          <li id="menu-item-24892" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-24892">
+            <a href="/menet/" data-menu-index="1" class="no-barba"><span class='hidden blogFull Inside'>Inside</span><span class="redden"><span class="ME">ME</span>&nbsp;&nbsp;net</span><span class='hidden blogFull Working'>Working</span></a>
+          </li>
+          <li id="menu-item-24896" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-24896">
+            <a href="/projects/" data-menu-index="2" class="no-barba"><span></span><span class="redden">Projects</span> <span class='hidden projectsFull todiscover'>to&nbsp;discover</span></a>
+          </li>
+        </ul>
+      </div>
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
             <div class="site-heading">
+              <img class="main-logo" src="/wp-content/themes/MEnet-wp/static/img/logomobile.jpeg">
               <h1 class="blair"><span class="ME">ME</span>&nbsp;&nbsp;net</h1>
-              <span class="subheading"><p><strong>Your idea is a valid one</strong></p> Inside <span class="blair"><span class="ME">ME</span>&nbsp;&nbsp;&nbsp;netWork</span> you will find collaboration and brainstorming to achieve it</span>
+              <span class="subheading">
+                <div class="subheading01">
+                  <p><strong>Your idea is a valid one</strong></p>
+                </div>
+                <div class="subheading02">
+                  Inside <span class="blair"><span class="ME">ME</span>&nbsp;&nbsp;&nbsp;netWork</span> you will findensswewddsds collaboration and brainstorming to achieve it</span>
+                </div>
             </div>
           </div>
         </div>
       </div>
+      <?php get_footer(); ?>
     </header>
 
     <p><button class="btn btn-primary start">◀︎ Explore</button></p>
 
-    <div class="exploration" style="display: none;">
-      <div class="overlay particle-network-animation"></div>
-    </div>
-
-    <div class="container" id="blogposts">
+    <!-- <div class="container" id="blogposts">
         <div class="row" data-aos="slide-up">
             <div class="col-md-10 col-lg-8">
                 <?php $the_query = new WP_Query( 'posts_per_page=5' ); ?>
@@ -69,8 +86,7 @@
                 <div class="clearfix"></div>
             </div>
         </div>
-    </div>
-    <?php get_footer(); ?>
+    </div> -->
   </div>
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>

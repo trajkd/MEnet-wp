@@ -169,7 +169,9 @@
 
   $('.summary #ez-toc-container').css('display','none');
 
-  $('.histoire').createTOC({title: "", insert: ".toc"});
+  if ($('.histoire').length) {
+    $('.histoire').createTOC({title: "", insert: ".toc"});
+  }
 
   $(".toc-box").on('click', function (e) {
     if (e.offsetX < 8) {
@@ -183,5 +185,19 @@
       isTOCvisible = !isTOCvisible;
     }
   });
+
+  function scaleLogo() {
+    if (window.screen.height < 700) {
+      let perpx = 0.75/700;
+      let ratio = perpx * window.screen.height;
+      $(".main-logo").css('transform','scale('+ratio+')');
+    }
+    else {
+      $(".main-logo").css('transform','scale(1)');
+    }
+  }
+
+  scaleLogo();
+  $(window).resize(scaleLogo);
 
 })(jQuery); // End of use strict
