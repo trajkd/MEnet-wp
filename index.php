@@ -56,7 +56,7 @@
                   <p><strong>Your idea is a valid one</strong></p>
                 </div>
                 <div class="subheading02">
-                  Inside <span class="blair"><span class="ME">ME</span>&nbsp;&nbsp;&nbsp;netWork</span> you will findensswewddsds collaboration and brainstorming to achieve it</span>
+                  Inside <span class="blair"><span class="ME">ME</span>&nbsp;&nbsp;&nbsp;netWork</span> you will find collaboration and brainstorming to achieve it</span>
                 </div>
             </div>
           </div>

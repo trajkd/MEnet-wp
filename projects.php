@@ -45,7 +45,7 @@
 		    	  <div class="display">
 		    	  	<a href="<?php echo get_category_link( $cat->term_id ) ?>">
 							  <div class="mdc-card__primary-action">
-							    <div class="mdc-card__media my-card__media" style="background-image: url('<?php if(category_description( $cat )) echo category_description( $cat ); else echo '/wp-content/themes/MEnet-wp/static/img/ikea-man.svg' ?>');">
+							    <div class="mdc-card__media my-card__media" style="background-image: url('<?php if(category_description( $cat )) echo category_description( $cat ); else echo '/wp-content/uploads/2020/08/grey.png' ?>');">
 							    	<div class="summary">
 											<b><?php echo $cat->name; ?></b>
 									  </div>

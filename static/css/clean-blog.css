@@ -1198,7 +1198,6 @@ header.masthead {
   margin-left: 0;
   padding: 15px;
   color: white;
-  text-shadow: 0 0 5px rgba(0,0,0,0.7), 0 0 15px rgba(0,0,0,0.7);
   position: relative;
   z-index: 2;
   width: 100%;
@@ -1211,7 +1210,6 @@ header.masthead {
 
 .projects-grid .summary:hover, .projects-grid .summary:active, .projects-grid .summary:focus {
   color: #ff0007;
-  text-shadow: 0 0 5px rgba(255,255,255,0.7), 0 0 15px rgba(255,255,255,0.7);
 }
 
 .projects-grid .display, .wiki-grid .display {
