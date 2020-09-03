@@ -746,6 +746,6 @@
 		return array[Math.floor(Math.random()*array.length)];
 	};
 
-pna = new ParticleNetworkAnimation();	pna.init($('.particle-network-animation'));
+pna = new ParticleNetworkAnimation();	pna.init($('.particle-network-animation')[0]);
 
 }());
