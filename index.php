@@ -49,7 +49,6 @@
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
             <div class="site-heading">
-              <img class="main-logo" src="/wp-content/themes/MEnet-wp/static/img/logomobile.jpeg">
               <h1 class="blair"><span class="ME">ME</span>&nbsp;&nbsp;net</h1>
               <span class="subheading">
                 <div class="subheading01">
