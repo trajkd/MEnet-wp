@@ -462,10 +462,10 @@ header.masthead #navbarResponsive {
 }
 
 @media only screen and (max-width: 768px) {
-  header.masthead {
+  /*header.masthead {
     background-image: url('../img/logomobile.jpeg');
     background-position: 50% -60%;
-  }
+  }*/
 }
 
 header.masthead .overlay {
