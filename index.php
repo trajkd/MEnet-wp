@@ -51,9 +51,6 @@
             <div class="site-heading">
               <h1 class="blair"><span class="ME">ME</span>&nbsp;&nbsp;net</h1>
               <span class="subheading">
-                <div class="subheading01">
-                  <p><strong>Your idea is a valid one</strong></p>
-                </div>
                 <div class="subheading02">
                   Inside <span class="blair"><span class="ME">ME</span>&nbsp;&nbsp;&nbsp;netWork</span> you will find collaboration and brainstorming to achieve it</span>
                 </div>
