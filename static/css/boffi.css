@@ -4505,7 +4505,7 @@ html.desktop #menu-bar:hover #hamburger-btn span {
 }
 @media (max-width: 449px) {
     #user-actions {
-        left: 57%;
+        left: 53%;
     }
 }
 @media (min-width: 992px) {

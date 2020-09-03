@@ -56,7 +56,7 @@
       </div>
     </div>
     <a id="search-btn" href="/search" internal-route="">
-      <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+      <svg width="20" height="20" xmlns="https://www.w3.org/2000/svg">
         <g transform="translate(1 1)" stroke-width="2" stroke="#000" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="7.5" cy="7.5" r="7.5"></circle>
           <path d="M18 18l-5-5"></path>
