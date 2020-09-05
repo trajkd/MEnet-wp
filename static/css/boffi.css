@@ -4268,7 +4268,7 @@ html.desktop #menu .close-menu-btn:hover {
     pointer-events: inherit;
 }
 #menu-bar {
-    bottom: 0;
+    top: calc(100vh - 70px);
     left: 0;
     z-index: 3;
     display: block;
