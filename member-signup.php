@@ -67,16 +67,16 @@ if (isset($_POST['billing_state'])) {
 echo 
 <<<EOD
 <script type="text/javascript">
-  if (window.location.href.includes("/en/")) {
-    var region_denomination = "State/Province";
-  } else {
+  if (window.location.href.includes("/it/")) {
     var region_denomination = "Stato/Provincia";
+  } else {
+    var region_denomination = "State/Province";
   }
   if ($('#selectric-billing-country').val() === 'Italy') {
-    if (window.location.href.includes("/en/")) {
-      region_denomination = "Province";
-    } else {
+    if (window.location.href.includes("/it/")) {
       region_denomination = "Provincia";
+    } else {
+      region_denomination = "Province";
     }
     regions = 
     `
@@ -228,39 +228,7 @@ echo
       <option value="Zürich">Zürich</option>
       `;
     }
-    else if (window.location.href.includes("/en/")) {
-      region_denomination = "Canton";
-      regions = 
-      `
-      <option value="Aargau">Aargau</option>
-      <option value="Appenzell Ausserrhoden">Appenzell Ausserrhoden</option>
-      <option value="Appenzell Innerrhoden">Appenzell Innerrhoden</option>
-      <option value="Basel-Landschaft">Basel-Landschaft</option>
-      <option value="Basel-Stadt">Basel-Stadt</option>
-      <option value="Bern">Bern</option>
-      <option value="Freiburg">Fribourg</option>
-      <option value="Genève">Geneva</option>
-      <option value="Glarus">Glarus</option>
-      <option value="Grigioni">Grisons</option>
-      <option value="Jura">Jura</option>
-      <option value="Luzern">Luzern</option>
-      <option value="Neuchâtel">Neuchâtel</option>
-      <option value="Nidwalden">Nidwalden</option>
-      <option value="Obwalden">Obwalden</option>
-      <option value="Schaffhausen">Schaffhausen</option>
-      <option value="Schwyz">Schwyz</option>
-      <option value="Solothurn">Solothurn</option>
-      <option value="Sankt Gallen">St. Gallen</option>
-      <option value="Thurgau">Thurgau</option>
-      <option value="Ticino">Ticino</option>
-      <option value="Uri">Uri</option>
-      <option value="Valais">Valais</option>
-      <option value="Vaud">Vaud</option>
-      <option value="Zug">Zug</option>
-      <option value="Zürich">Zürich</option>
-      `;
-    }
-    else {
+    else if (window.location.href.includes("/it/")) {
       region_denomination = "Cantone";
       regions = 
       `
@@ -292,13 +260,45 @@ echo
       <option value="Zürich">Zurigo</option>
       `;
     }
+    else {
+      region_denomination = "Canton";
+      regions = 
+      `
+      <option value="Aargau">Aargau</option>
+      <option value="Appenzell Ausserrhoden">Appenzell Ausserrhoden</option>
+      <option value="Appenzell Innerrhoden">Appenzell Innerrhoden</option>
+      <option value="Basel-Landschaft">Basel-Landschaft</option>
+      <option value="Basel-Stadt">Basel-Stadt</option>
+      <option value="Bern">Bern</option>
+      <option value="Freiburg">Fribourg</option>
+      <option value="Genève">Geneva</option>
+      <option value="Glarus">Glarus</option>
+      <option value="Grigioni">Grisons</option>
+      <option value="Jura">Jura</option>
+      <option value="Luzern">Luzern</option>
+      <option value="Neuchâtel">Neuchâtel</option>
+      <option value="Nidwalden">Nidwalden</option>
+      <option value="Obwalden">Obwalden</option>
+      <option value="Schaffhausen">Schaffhausen</option>
+      <option value="Schwyz">Schwyz</option>
+      <option value="Solothurn">Solothurn</option>
+      <option value="Sankt Gallen">St. Gallen</option>
+      <option value="Thurgau">Thurgau</option>
+      <option value="Ticino">Ticino</option>
+      <option value="Uri">Uri</option>
+      <option value="Valais">Valais</option>
+      <option value="Vaud">Vaud</option>
+      <option value="Zug">Zug</option>
+      <option value="Zürich">Zürich</option>
+      `;
+    }
     $('#selectric-billing-region').removeAttr("disabled");
   }
   else if ($('#selectric-country').val() === 'United States') {
-    if (window.location.href.includes("/en/")) {
-      region_denomination = "State";
-    } else {
+    if (window.location.href.includes("/it/")) {
       region_denomination = "Stato";
+    } else {
+      region_denomination = "State";
     }
     regions = `
     <option value="Alabama">Alabama</option>
