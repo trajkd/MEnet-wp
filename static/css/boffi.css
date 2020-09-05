@@ -8742,11 +8742,13 @@ html.desktop #flagship-info-tabs__contact-pane-content > div a:hover {
     }
 }
 
-@media only screen and (max-width: 991px) {
-
+@media only screen and (min-width: 533px) and (max-width: 991px) {
     #mainNav.is-fixed {
         top: -150px;
     }
+}
+
+@media only screen and (max-width: 991px) {
 
     .member .list-inline-item:not(:last-child) {
         margin-right: .5rem;
