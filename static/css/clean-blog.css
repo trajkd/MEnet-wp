@@ -1615,6 +1615,14 @@ ul.toc-box li:first-child {
   font-size: 0.7rem;
 }
 
+.input-text__label[for="reg_password-confirmation"] span {
+  font-size: 14px;
+}
+
+#reg_password-confirmation:focus + .input-text__label span, #reg_password-confirmation:not(.is--empty) + .input-text__label span {
+  font-size: 1.1rem;
+}
+
 .form-login .input-text__input:focus + .input-text__label span, .form-login .input-text__input:not(.is--empty) + .input-text__label span {
   font-size: 0.79rem;
 }
