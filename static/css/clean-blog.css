@@ -1640,3 +1640,8 @@ ul.toc-box li:first-child {
 .loggedout .container-fluid {
   margin-top: 0;
 }
+
+@media only screen and (max-width: 499px) {
+#menu-top-central li a::before {
+  top: 1.5em;
+}
