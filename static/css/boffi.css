@@ -8676,3 +8676,76 @@ html.desktop #flagship-info-tabs__contact-pane-content > div a:hover {
 .collection-components-type .collection-components-type__grid {
     padding-top: 20px;
 }
+
+
+@media only screen and (max-width: 991px) {
+    .sidebar-container {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    footer {
+        display: none;
+    }
+}
+
+.sidebar-container {
+    position: absolute;
+    bottom: 70px;
+    left: 0;
+}
+
+.sidebar-container .list-inline-item {
+    margin: 0;
+    margin-bottom: .5rem;
+}
+
+.sidebar-container ul {
+    margin: 0;
+}
+
+.sidebar-container .row {
+    margin: 0;
+}
+
+.member .text-center {
+    width: 97px;
+    text-align: center !important;
+}
+
+.fa-paper-plane {
+    left: -2px !important;
+}
+
+.member #menu-bar__boffi-logo {
+    top: 35px;
+}
+
+@media (min-width: 992px) {
+    .member #menu-bar__boffi-logo {
+        top: 43.5px;
+    }
+}
+
+.member #mainNav.is-fixed {
+    top: -140px;
+}
+
+.member #user-actions {
+    margin-left: 1px;
+}
+
+@media only screen and (max-width: 991px) {
+    .member .list-inline-item:not(:last-child) {
+        margin-right: .5rem;
+    }
+    .member .list-inline-item {
+        margin-bottom: 0;
+        display: inline-block;
+    }
+
+    .member .text-center {
+        width: 100%;
+    }
+}
