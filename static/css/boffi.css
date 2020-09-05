@@ -4240,7 +4240,7 @@ html.desktop .partner-launcher .partner-launcher-img-wrapper:hover .media-wrappe
 #menu-bar,
 #menu-bar .close-menu-btn,
 #menu-bar .ripple {
-    position: absolute;
+    position: fixed;
     right: auto;
     visibility: inherit;
     box-sizing: border-box;
