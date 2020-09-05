@@ -1634,5 +1634,9 @@ ul.toc-box li:first-child {
 }
 
 .copy-address {
-  height:150px;
+  height: 150px;
+}
+
+.loggedout .container-fluid {
+  margin-top: 0;
 }

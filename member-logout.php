@@ -17,6 +17,8 @@ if ( is_user_logged_in() ){ header( "Location: /member/account" ); die; } ?>
   <link rel="stylesheet" type="text/css" href="/wp-content/themes/MEnet-wp/static/css/flex.scss">
   <link rel="stylesheet" type="text/css" href="/wp-content/themes/MEnet-wp/static/css/base.scss">
   <link rel="stylesheet" type="text/css" href="/wp-content/themes/MEnet-wp/static/css/boffi.css">
+  <link href="/wp-content/themes/MEnet-wp/static/css/material-components-web-custom-font.css" rel="stylesheet">
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
   <link rel="stylesheet" href="/wp-content/themes/MEnet-wp/static/fonts/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,500i,700,800i" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -28,18 +30,15 @@ if ( is_user_logged_in() ){ header( "Location: /member/account" ); die; } ?>
 <body>
   <div id="sidebar-section-peripherial" class="member">
     <?php get_sidebar(); ?>
-    <div role="alert" data-bind="foreach: { data: cookieMessages, as: 'message' }" class="modal-popup confirm _show alert-messages" style="display: block;">
-        <div data-bind="attr: {
-            class: 'message-' + message.type + ' ' + message.type + ' message modal-content modal-inner-wrap',
-            'data-ui-id': 'message-' + message.type
-        }" class="message-success success message modal-content modal-inner-wrap" data-ui-id="message-success">
-            <div data-bind="html: message.text"><?php esc_html_e( 'You\'ve been logged out.', 'woocommerce' ); ?></div>
-        </div>
-    </div>
-    <div class="login-container"><main id="main-content" class="flex-1">
-     <section class="container-fluid t-spacer-15 lg-t-spacer-3 txt-center">
-        <h1 class="font-size-xxl lg-font-size-xxl2"><?php esc_html_e( 'Login', 'woocommerce' ); ?></h1>
-     </section>
+    <div class="login-container loggedout"><main id="main-content" class="flex-1">
+      <div role="alert" data-bind="foreach: { data: cookieMessages, as: 'message' }" class="modal-popup confirm _show alert-messages" style="display: block;width: max-content;margin: 0 auto;">
+          <div data-bind="attr: {
+              class: 'message-' + message.type + ' ' + message.type + ' message modal-content modal-inner-wrap',
+              'data-ui-id': 'message-' + message.type
+          }" class="message-success success message modal-content modal-inner-wrap" data-ui-id="message-success">
+              <div data-bind="html: message.text"><?php esc_html_e( 'You\'ve been logged out.', 'woocommerce' ); ?></div>
+          </div>
+      </div>
      <section class="container-fluid v-spacer-15 lg-b-spacer-3">
         <div class="row">
            <div class="col-lg-10 offset-lg-1">
@@ -61,8 +60,11 @@ if ( is_user_logged_in() ){ header( "Location: /member/account" ); die; } ?>
                                  <div class="t-spacer-05">
                                      <a data-ctrl="Cta" href="/customer/signup" class="cta
                                    " data-ctrl-id="Cta-86057">
-                                         <span class="cta__text  "><?php esc_html_e( 'Sign up', 'woocommerce_you' ); ?>‣</span>
-                                     </a>
+                                      <button class="mdc-button mdc-card__action mdc-card__action--button">
+                                        <div class="mdc-button__ripple"></div>
+                                        <span class="mdc-button__label"><?php esc_html_e( 'Sign up', 'woocommerce_you' ); ?></span>
+                                      </button>
+                                    </a>
                                  </div>
                              </div>
                          </div>
