@@ -18,6 +18,6 @@ $(".close-menu-btn").on('click', function() {
 
 $("#hamburger-btn").on('click', function() {
     $(".el-init").addClass("open");
+});
 
 window.scrollBy(0, 1);
-});
