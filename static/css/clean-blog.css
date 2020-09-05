@@ -446,10 +446,6 @@ header.masthead {
   position: absolute;
 }
 
-.main nav.navbar {
-  display: none;
-}
-
 .main {
   height: 100vh;
 }
