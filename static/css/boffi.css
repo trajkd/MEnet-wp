@@ -4281,6 +4281,7 @@ html.desktop #menu .close-menu-btn:hover {
     will-change: background-color, transform, border-color;
 }
 .member #menu-bar {
+    top: auto;
     bottom: 0;
 }
 #menu-bar.css-transition-disabled {
