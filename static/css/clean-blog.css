@@ -1617,7 +1617,7 @@ ul.toc-box li:first-child {
   font-size: 0.7rem;
 }
 
-.form-login .input-text__input:focus + .form-login .input-text__label span, .form-login .input-text__input:not(.is--empty) + .form-login .input-text__label span {
+.form-login .input-text__input:focus + .input-text__label span, .form-login .input-text__input:not(.is--empty) + .input-text__label span {
   font-size: 0.79rem;
 }
 
