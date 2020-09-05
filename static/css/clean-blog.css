@@ -1645,3 +1645,7 @@ ul.toc-box li:first-child {
 #menu-top-central li a::before {
   top: 1.5em;
 }
+
+.modal-popup {
+  padding-top: 50px;
+}
