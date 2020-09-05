@@ -4280,10 +4280,6 @@ html.desktop #menu .close-menu-btn:hover {
     transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, transform 0.3s ease-in-out;
     will-change: background-color, transform, border-color;
 }
-.member #menu-bar {
-    top: auto;
-    bottom: 0;
-}
 #menu-bar.css-transition-disabled {
     transition: none !important;
     will-change: margin;

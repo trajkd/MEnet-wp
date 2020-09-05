@@ -471,8 +471,6 @@ header.masthead #navbarResponsive {
 }
 
 #menu-bar, #menu {
-  position: sticky;
-  bottom: 0;
   left: 0;
 }
 
