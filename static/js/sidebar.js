@@ -20,4 +20,8 @@ $("#hamburger-btn").on('click', function() {
     $(".el-init").addClass("open");
 });
 
-window.scrollBy(0, 1);
+window.addEventListener("load",function() {
+    setTimeout(function(){
+        window.scrollTo(0, 1);
+    }, 0);
+});

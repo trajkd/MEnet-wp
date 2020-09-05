@@ -8728,7 +8728,7 @@ html.desktop #flagship-info-tabs__contact-pane-content > div a:hover {
     }
 }
 
-.member #mainNav.is-fixed {
+#mainNav.is-fixed {
     top: -140px;
 }
 
@@ -8736,9 +8736,15 @@ html.desktop #flagship-info-tabs__contact-pane-content > div a:hover {
     margin-left: 1px;
 }
 
+@media only screen and (max-width: 532px) {
+    #mainNav.is-fixed {
+        top: -176px;
+    }
+}
+
 @media only screen and (max-width: 991px) {
 
-    .member #mainNav.is-fixed {
+    #mainNav.is-fixed {
         top: -150px;
     }
 
