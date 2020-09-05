@@ -4240,7 +4240,7 @@ html.desktop .partner-launcher .partner-launcher-img-wrapper:hover .media-wrappe
 #menu-bar,
 #menu-bar .close-menu-btn,
 #menu-bar .ripple {
-    position: sticky;
+    position: absolute;
     right: auto;
     visibility: inherit;
     box-sizing: border-box;
@@ -4268,7 +4268,7 @@ html.desktop #menu .close-menu-btn:hover {
     pointer-events: inherit;
 }
 #menu-bar {
-    top: calc(100vh - 70px);
+    bottom: 0;
     left: 0;
     z-index: 3;
     display: block;

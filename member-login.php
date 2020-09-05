@@ -5,7 +5,7 @@ if ( is_user_logged_in() ){ header( "Location: /member/account" ); die; }
 <head>
   <title><?php esc_html_e( 'Login', 'woocommerce' ); ?> - <?php bloginfo( 'name' ) ?></title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="/wp-content/themes/MEnet-wp/static/css/header.css">
   <link rel="stylesheet" type="text/css" href="/wp-content/themes/MEnet-wp/static/css/style.min.css">
