@@ -1,3 +1,69 @@
+require('dotenv').config();
+AWS.config.update({
+  region: "us-east-2",
+  endpoint: 'https://dynamodb.us-east-2.amazonaws.com',
+  accessKeyId: process.env.AWS_ID,
+  secretAccessKey: process.env.AWS_SECRET
+});
+
+var docClient = new AWS.DynamoDB.DocumentClient();
+
+function createItem(address, balance) {
+    var params = {
+        TableName :"Balances",
+        Item:{
+            "address": address,
+            "balance": balance
+        }
+    };
+}
+
+function updateItem(address, balance) {
+    var params = {
+        TableName: "Balances",
+        Key:{
+            "address": address
+        },
+        UpdateExpression: "set balance = :b",
+        ExpressionAttributeValues:{
+            ":b": balance
+        },
+        ReturnValues:"UPDATED_NEW"
+    };
+}
+
+function readItem() {
+    var params = {
+        TableName: "Balances",
+        Key:{
+            "address": address
+        }
+    };
+    docClient.get(params, function(err, data) {
+        if (err) {
+            console.log("Unable to read balances: " + "\n" + JSON.stringify(err, undefined, 2));
+        } else {
+            return data.Item;
+        }
+    });
+}
+
+function scanData() {
+    var params = {
+        TableName: "Balances"
+    };
+
+    docClient.scan(params, onScan);
+
+    function onScan(err, data) {
+        if (err) {
+            console.log("Unable to scan balances: " + "\n" + JSON.stringify(err, undefined, 2));
+        } else {
+        	return data.Items;         
+        }
+    }
+}
+
 function Coin(Contract) {
     this.web3 = null;
     this.instance = null;
@@ -59,8 +125,6 @@ Coin.prototype.createTokens = function() {
         return;
     }
 
-    console.log(window.web3);
-
     this.instance.mint(address, amount, { from:
 window.web3.eth.accounts[0], gas: 100000, gasPrice: 100000, gasLimit: 100000 }, 
                 function(error, txHash) {
@@ -72,6 +136,10 @@ window.web3.eth.accounts[0], gas: 100000, gasPrice: 100000, gasLimit: 100000 },
                     if(receipt.status) {
                         $("#create-address").val("");
                         $("#create-amount").val("");
+                        var balancetoadd = readItem();
+                        if (!balancetoadd) {
+                        	createItem(balancetoadd.address, balancetoadd.balance);
+                        }
                     }
                     else {
                         console.log("error");
@@ -119,7 +187,25 @@ Coin.prototype.bindButtons = function() {
 
     $(document).on("click", "#button-check", function() {
         that.showAddressBalance();
-    }); 
+    });
+
+    setTimeout(function(){
+    	var balances = scanData();
+    	balances.forEach(function(oldbalance) {
+			that.getBalance(oldbalance.address, function(error, newbalance) {
+		        if(error) {
+		            console.log(error)
+		        }
+		        else {
+		            updateItem(oldbalance.address, newbalance.toNumber())
+				}
+			});
+		});
+		var balances = scanData();
+		balances.forEach(function(updatedbalance) {
+			$(".realtime-data").innerHTML += updatedbalance.address + ": " + updatedbalance.balance + "<br>"
+		});
+    }, 10000);
 };
 
 Coin.prototype.onReady = function() {

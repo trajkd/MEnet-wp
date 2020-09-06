@@ -60,6 +60,13 @@
 
     <h1 class="text message">Balance: <span id="message"></span></h1>
 
+    <div class="realtime">
+      <h2>Realtime balances<h2>
+      <div class="realtime-data">
+      </div>
+    </div>
+
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.7.16.min.js"></script>
     <script src="/wp-content/themes/MEnet-wp/static/js/blockchain.js"></script>
 </body>
 
