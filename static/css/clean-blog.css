@@ -1486,15 +1486,15 @@ ul.toc-box li:first-child {
   }
 
   .ContentPage .staticContent_Wrapper .static_content h2{
-    font-size: 4vw;
+    font-size: 5vw;
   }
 
   .ContentPage .staticContent_Wrapper .static_content h3 {
-    font-size: 2.4vw;
+    font-size: 4.75vw;
   }
 
   .ContentPage .staticContent_Wrapper .static_content p {
-    font-size: 1.5vw;
+    font-size: 4.5vw;
   }
 }
 
