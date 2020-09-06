@@ -58,7 +58,7 @@ var scanData = new Promise(function(resolve) {
         if (err) {
             console.log("Unable to scan balances: " + "\n" + JSON.stringify(err, undefined, 2));
         } else {
-        	return resolve(data.Items);         
+        	resolve(data.Items);         
         }
     }
 });
