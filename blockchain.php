@@ -11,6 +11,8 @@
 
   <title><?php bloginfo( 'name' ) ?></title>
 
+  <link rel="shortcut icon" href="/favicon.png" />
+
   <!-- Bootstrap core CSS -->
   <link href="/wp-content/themes/MEnet-wp/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
