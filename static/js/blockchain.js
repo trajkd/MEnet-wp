@@ -234,7 +234,7 @@ Coin.prototype.bindButtons = function() {
         that.showAddressBalance();
     });
 
-    setTimeout(function(){
+    window.setInterval(function(){
     	var balances = scanData();
     	if(balances) {
     		balances.forEach(function(oldbalance) {
