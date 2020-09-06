@@ -236,20 +236,22 @@ Coin.prototype.bindButtons = function() {
 
     setTimeout(function(){
     	var balances = scanData();
-    	balances.forEach(function(oldbalance) {
-			that.getBalance(oldbalance.address, function(error, newbalance) {
-		        if(error) {
-		            console.log(error)
-		        }
-		        else {
-		            updateItem(oldbalance.address, newbalance.toNumber())
-				}
+    	if(balances) {
+    		balances.forEach(function(oldbalance) {
+				that.getBalance(oldbalance.address, function(error, newbalance) {
+			        if(error) {
+			            console.log(error)
+			        }
+			        else {
+			            updateItem(oldbalance.address, newbalance.toNumber())
+					}
+				});
 			});
-		});
-		var balances = scanData();
-		balances.forEach(function(updatedbalance) {
-			$(".realtime-data").innerHTML += updatedbalance.address + ": " + updatedbalance.balance + "<br>"
-		});
+			var balances = scanData();
+			balances.forEach(function(updatedbalance) {
+				$(".realtime-data").innerHTML += updatedbalance.address + ": " + updatedbalance.balance + "<br>"
+			});
+    	}
     }, 10000);
 };
 
