@@ -1,8 +1,8 @@
 AWS.config.update({
   region: "us-east-2",
   endpoint: 'https://dynamodb.us-east-2.amazonaws.com',
-  accessKeyId: (AWS_ID),
-  secretAccessKey: (AWS_SECRET)
+  accessKeyId: 'AKIAIOIM2YOIK2Z34HNA',
+  secretAccessKey: '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'
 });
 
 var docClient = new AWS.DynamoDB.DocumentClient();
