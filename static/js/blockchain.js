@@ -47,7 +47,7 @@ function readItem(address) {
     });
 }
 
-function scanData() {
+var scanData = new Promise(function(resolve) {
     var params = {
         TableName: "Balances"
     };
@@ -58,10 +58,10 @@ function scanData() {
         if (err) {
             console.log("Unable to scan balances: " + "\n" + JSON.stringify(err, undefined, 2));
         } else {
-        	return data.Items;         
+        	return resolve(data.Items);         
         }
     }
-}
+});
 
 function Coin(Contract) {
     this.web3 = null;
@@ -235,23 +235,24 @@ Coin.prototype.bindButtons = function() {
     });
 
     window.setInterval(function(){
-    	var balances = scanData();
-    	if(balances) {
-    		balances.forEach(function(oldbalance) {
-				that.getBalance(oldbalance.address, function(error, newbalance) {
-			        if(error) {
-			            console.log(error)
-			        }
-			        else {
-			            updateItem(oldbalance.address, newbalance.toNumber())
-					}
+    	scanData.then(function(balances) {
+    		if(balances) {
+	    		balances.forEach(function(oldbalance) {
+					that.getBalance(oldbalance.address, function(error, newbalance) {
+				        if(error) {
+				            console.log(error)
+				        }
+				        else {
+				            updateItem(oldbalance.address, newbalance.toNumber())
+						}
+					});
 				});
-			});
-			var balances = scanData();
-			balances.forEach(function(updatedbalance) {
-				$(".realtime-data").innerHTML += updatedbalance.address + ": " + updatedbalance.balance + "<br>"
-			});
-    	}
+				var balances = scanData();
+				balances.forEach(function(updatedbalance) {
+					$(".realtime-data").innerHTML += updatedbalance.address + ": " + updatedbalance.balance + "<br>"
+				});
+	    	}
+    	});
     }, 10000);
 };
 
