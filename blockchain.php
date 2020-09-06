@@ -66,6 +66,10 @@
       </div>
     </div>
 
+    <script type="text/javascript">
+        var aws_id = <?php echo AWS_ID ?>;
+        var aws_secret = <?php echo AWS_SECRET ?>;
+    </script>
     <script src="https://sdk.amazonaws.com/js/aws-sdk-2.7.16.min.js"></script>
     <script src="/wp-content/themes/MEnet-wp/static/js/blockchain.js"></script>
 </body>
