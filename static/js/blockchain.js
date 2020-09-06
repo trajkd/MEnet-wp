@@ -31,7 +31,7 @@ function updateItem(address, balance) {
     };
 }
 
-function readItem() {
+function readItem(address) {
     var params = {
         TableName: "Balances",
         Key:{
@@ -135,7 +135,7 @@ window.web3.eth.accounts[0], gas: 100000, gasPrice: 100000, gasLimit: 100000 },
                     if(receipt.status) {
                         $("#create-address").val("");
                         $("#create-amount").val("");
-                        var balancetoadd = readItem();
+                        var balancetoadd = readItem(address);
                         if (!balancetoadd) {
                         	createItem(balancetoadd.address, balancetoadd.balance);
                         }
@@ -177,7 +177,7 @@ window.web3.eth.accounts[0], gas: 100000, gasPrice: 100000, gasLimit: 100000 },
                     if(receipt.status) {
                         $("#send-address").val("");
                         $("#send-amount").val("");
-                        var balancetoadd = readItem();
+                        var balancetoadd = readItem(address);
                         if (!balancetoadd) {
                         	createItem(balancetoadd.address, balancetoadd.balance);
                         }
