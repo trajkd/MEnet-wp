@@ -149,6 +149,48 @@ window.web3.eth.accounts[0], gas: 100000, gasPrice: 100000, gasLimit: 100000 },
     )
 };
 
+Coin.prototype.sendTokens = function() {
+    var that = this;
+    
+    var address = $("#send-address").val();
+    var amount = $("#send-amount").val();
+    console.log(amount);
+
+    if(!isValidAddress(address)) {
+        console.log("Invalid address");
+        return;
+    }
+
+    if(!isValidAmount(amount)) {
+        console.log("Invalid amount");
+        return;
+    }
+
+    this.instance.send(address, amount, { from:
+window.web3.eth.accounts[0], gas: 100000, gasPrice: 100000, gasLimit: 100000 }, 
+                function(error, txHash) {
+            if(error) {
+                console.log(error);
+            }
+            else {
+                that.waitForReceipt(txHash, function(receipt) {
+                    if(receipt.status) {
+                        $("#send-address").val("");
+                        $("#send-amount").val("");
+                        var balancetoadd = readItem();
+                        if (!balancetoadd) {
+                        	createItem(balancetoadd.address, balancetoadd.balance);
+                        }
+                    }
+                    else {
+                        console.log("error");
+                    }
+                });
+            }
+        }
+    )
+};
+
 Coin.prototype.waitForReceipt = function(hash, cb) {
     var that = this;
 
@@ -182,6 +224,10 @@ Coin.prototype.bindButtons = function() {
 
     $(document).on("click", "#button-create", function() {
         that.createTokens();
+    });
+
+    $(document).on("click", "#button-send", function() {
+        that.sendTokens();
     });
 
     $(document).on("click", "#button-check", function() {

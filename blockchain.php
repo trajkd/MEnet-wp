@@ -33,7 +33,7 @@
 
 <body>
     <div id="create" class="tabcontent">
-        <h2>Create new coins</h2>
+        <h2>Create new coins (only for minter 0xFD7A7a854Cd128AC934eb1891Ab95ddC8b7E90a0)</h2>
         <div class="input-group">
             <h3>Address</h3>
             <input type="text" id="create-address" placeholder="Enter address" />
@@ -44,6 +44,21 @@
         </div>
         <div class="input-group">
             <button class="btn" id="button-create">Send</button>
+        </div>
+    </div>
+
+    <div id="create" class="tabcontent">
+        <h2>Send coins</h2>
+        <div class="input-group">
+            <h3>Address</h3>
+            <input type="text" id="send-address" placeholder="Enter address" />
+        </div>
+        <div class="input-group">
+            <h3>Amount</h3>
+            <input type="number" id="send-amount" placeholder="Enter amount..." />
+        </div>
+        <div class="input-group">
+            <button class="btn" id="button-send">Send</button>
         </div>
     </div>
 
@@ -65,7 +80,7 @@
       <div class="realtime-data">
       </div>
     </div>
-    
+
     <script src="https://sdk.amazonaws.com/js/aws-sdk-2.7.16.min.js"></script>
     <script src="/wp-content/themes/MEnet-wp/static/js/blockchain.js"></script>
 </body>
