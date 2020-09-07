@@ -180,10 +180,11 @@ window.web3.eth.accounts[0], gas: 100000, gasPrice: 100000, gasLimit: 100000 },
                     if(receipt.status) {
                         $("#send-address").val("");
                         $("#send-amount").val("");
-                        var balancetoadd = readItem(address);
-                        if (!balancetoadd) {
-                        	createItem(balancetoadd.address, balancetoadd.balance);
-                        }
+                        readItem(address).then(function(balancetoadd) {
+                            if (!balancetoadd) {
+                                createItem(balancetoadd.address, balancetoadd.balance);
+                            }
+                        });
                     }
                     else {
                         console.log("error");
@@ -239,7 +240,7 @@ Coin.prototype.bindButtons = function() {
 
     window.setInterval(function(){
     	scanData.then(function(balances) {
-    		if(balances) {
+    		if(balances.length > 0) {
 	    		balances.forEach(function(oldbalance) {
 					that.getBalance(oldbalance.address, function(error, newbalance) {
 				        if(error) {
