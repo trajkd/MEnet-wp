@@ -1651,3 +1651,21 @@ ul.toc-box li:first-child {
 .modal-popup {
   padding-top: 50px;
 }
+
+.message-wrapper {
+  margin-top: 190px;
+}
+
+@media only screen and (min-width: 992px) {
+  .message-wrapper {
+    margin-left: 96px;
+  }
+}
+
+.registration-success-message {
+  width: 60vw;
+  text-align: center;
+  margin: 0 auto;
+  font-family: 'BlairMdITC TT';
+  font-size: 3vw;
+}
