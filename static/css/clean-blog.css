@@ -1494,6 +1494,7 @@ ul.toc-box li:first-child {
   }
 
   .ContentPage .staticContent_Wrapper .static_content p, .ContentPage .staticContent_Wrapper .static_content li {
+    line-height: 1.5;
     font-size: 4.5vw;
   }
 }
