@@ -29,6 +29,12 @@ function updateItem(address, balance) {
         },
         ReturnValues:"UPDATED_NEW"
     };
+
+    docClient.update(params, function(err, data) {
+        if (err) {
+            console.log("Unable to update item: " + "\n" + JSON.stringify(err, undefined, 2));
+        }
+    });
 }
 
 var readItem = function(address) {
