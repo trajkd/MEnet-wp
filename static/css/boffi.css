@@ -8742,9 +8742,21 @@ html.desktop #flagship-info-tabs__contact-pane-content > div a:hover {
     }
 }
 
-@media only screen and (min-width: 533px) and (max-width: 991px) {
+@media only screen and (min-width: 533px) and (max-width: 696px) {
     #mainNav.is-fixed {
-        top: -150px;
+        top: -152px;
+    }
+}
+
+@media only screen and (min-width: 697px) and (max-width: 736px) {
+    #mainNav.is-fixed {
+        top: -176px;
+    }
+}
+
+@media only screen and (min-width: 737px) and (max-width: 991px) {
+    #mainNav.is-fixed {
+        top: -152px;
     }
 }
 
