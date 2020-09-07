@@ -46,7 +46,7 @@ var readItem = function(address) {
                 resolve(data.Item);
             }
         });
-    }
+    });
 }
 
 var scanData = new Promise(function(resolve) {
