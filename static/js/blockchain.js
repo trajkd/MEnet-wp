@@ -249,8 +249,9 @@ Coin.prototype.bindButtons = function() {
 				});
 				scanData.then(function(balances) {
     				balances.forEach(function(updatedbalance) {
-    					$(".realtime-data").innerHTML += updatedbalance.address + ": " + updatedbalance.balance + "<br>"
+    					var realtime += updatedbalance.address + ": " + updatedbalance.balance + "<br>";
     				});
+                    $(".realtime-data").get(0).innerHTML = realtime;
                 });
 	    	}
     	});
