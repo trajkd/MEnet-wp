@@ -31,20 +31,22 @@ function updateItem(address, balance) {
     };
 }
 
-function readItem(address) {
-    var params = {
-        TableName: "Balances",
-        Key:{
-            "address": address
-        }
-    };
-    docClient.get(params, function(err, data) {
-        if (err) {
-            console.log("Unable to read balances: " + "\n" + JSON.stringify(err, undefined, 2));
-        } else {
-            return data.Item;
-        }
-    });
+var readItem = function(address) {
+    return new Promise(function(resolve) {
+        var params = {
+            TableName: "Balances",
+            Key:{
+                "address": address
+            }
+        };
+        docClient.get(params, function(err, data) {
+            if (err) {
+                console.log("Unable to read balances: " + "\n" + JSON.stringify(err, undefined, 2));
+            } else {
+                resolve(data.Item);
+            }
+        });
+    }
 }
 
 var scanData = new Promise(function(resolve) {
@@ -135,10 +137,11 @@ window.web3.eth.accounts[0], gas: 100000, gasPrice: 100000, gasLimit: 100000 },
                     if(receipt.status) {
                         $("#create-address").val("");
                         $("#create-amount").val("");
-                        var balancetoadd = readItem(address);
-                        if (!balancetoadd) {
-                        	createItem(balancetoadd.address, balancetoadd.balance);
-                        }
+                        readItem(address).then(function(balancetoadd) {
+                            if (!balancetoadd) {
+                                createItem(balancetoadd.address, balancetoadd.balance);
+                            }
+                        });
                     }
                     else {
                         console.log("error");
