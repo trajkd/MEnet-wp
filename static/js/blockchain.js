@@ -49,6 +49,7 @@ var readItem = function(address) {
             if (err) {
                 console.log("Unable to read balances: " + "\n" + JSON.stringify(err, undefined, 2));
             } else {
+                console.log(data.Item);
                 resolve(data.Item);
             }
         });
@@ -194,6 +195,7 @@ window.web3.eth.accounts[0], gas: 100000, gasPrice: 100000, gasLimit: 100000 },
                         $("#send-address").val("");
                         $("#send-amount").val("");
                         readItem(address).then(function(balanceindb) {
+                            console.log(balanceindb);
                             if (balanceindb.length == 0) {
                                 this.getBalance(address, function(error, newbalance) {
                                     if(error) {
