@@ -15,6 +15,12 @@ function createItem(address, balance) {
             "balance": balance
         }
     };
+
+    docClient.put(params, function(err, data) {
+        if (err) {
+            console.log("Unable to add item: " + "\n" + JSON.stringify(err, undefined, 2));
+        }
+    });
 }
 
 function updateItem(address, balance) {
@@ -144,7 +150,7 @@ window.web3.eth.accounts[0], gas: 100000, gasPrice: 100000, gasLimit: 100000 },
                         $("#create-address").val("");
                         $("#create-amount").val("");
                         readItem(address).then(function(balanceindb) {
-                            if (balanceindb.length == 0) {
+                            if (!balanceindb) {
                                 that.getBalance(address, function(error, newbalance) {
                                     if(error) {
                                         console.log(error)
