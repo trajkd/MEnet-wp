@@ -145,7 +145,7 @@ window.web3.eth.accounts[0], gas: 100000, gasPrice: 100000, gasLimit: 100000 },
                         $("#create-amount").val("");
                         readItem(address).then(function(balanceindb) {
                             if (balanceindb.length == 0) {
-                                this.getBalance(address, function(error, newbalance) {
+                                that.getBalance(address, function(error, newbalance) {
                                     if(error) {
                                         console.log(error)
                                     }
@@ -195,7 +195,7 @@ window.web3.eth.accounts[0], gas: 100000, gasPrice: 100000, gasLimit: 100000 },
                         $("#send-amount").val("");
                         readItem(address).then(function(balanceindb) {
                             if (!balanceindb) {
-                                this.getBalance(address, function(error, newbalance) {
+                                that.getBalance(address, function(error, newbalance) {
                                     if(error) {
                                         console.log(error)
                                     }
