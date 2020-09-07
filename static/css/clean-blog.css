@@ -1493,7 +1493,7 @@ ul.toc-box li:first-child {
     font-size: 4.75vw;
   }
 
-  .ContentPage .staticContent_Wrapper .static_content p {
+  .ContentPage .staticContent_Wrapper .static_content p, .ContentPage .staticContent_Wrapper .static_content li {
     font-size: 4.5vw;
   }
 }
