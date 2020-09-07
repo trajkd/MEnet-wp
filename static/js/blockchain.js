@@ -143,9 +143,16 @@ window.web3.eth.accounts[0], gas: 100000, gasPrice: 100000, gasLimit: 100000 },
                     if(receipt.status) {
                         $("#create-address").val("");
                         $("#create-amount").val("");
-                        readItem(address).then(function(balancetoadd) {
-                            if (!balancetoadd) {
-                                createItem(balancetoadd.address, balancetoadd.balance);
+                        readItem(address).then(function(balanceindb) {
+                            if (balanceindb.length == 0) {
+                                this.getBalance(address, function(error, newbalance) {
+                                    if(error) {
+                                        console.log(error)
+                                    }
+                                    else {
+                                        createItem(address, newbalance.toNumber());
+                                    }
+                                });
                             }
                         });
                     }
@@ -186,9 +193,16 @@ window.web3.eth.accounts[0], gas: 100000, gasPrice: 100000, gasLimit: 100000 },
                     if(receipt.status) {
                         $("#send-address").val("");
                         $("#send-amount").val("");
-                        readItem(address).then(function(balancetoadd) {
-                            if (!balancetoadd) {
-                                createItem(balancetoadd.address, balancetoadd.balance);
+                        readItem(address).then(function(balanceindb) {
+                            if (balanceindb.length == 0) {
+                                this.getBalance(address, function(error, newbalance) {
+                                    if(error) {
+                                        console.log(error)
+                                    }
+                                    else {
+                                        createItem(address, newbalance.toNumber());
+                                    }
+                                });
                             }
                         });
                     }
