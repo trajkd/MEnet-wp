@@ -37,7 +37,7 @@
 		    	<div class="display">
 		    	  <a href="<?php the_permalink() ?>">
 					<div class="mdc-card__primary-action">
-					  <div class="mdc-card__media mdc-card__media--square my-card__media" style="background-image: url('<?php if(get_the_post_thumbnail_url()) echo get_the_post_thumbnail_url(); else echo '/wp-content/themes/MEnet-wp/static/img/ikea.svg' ?>');"></div>
+					  <div class="mdc-card__media mdc-card__media--square my-card__media" style="background-image: url('<?php if(get_the_post_thumbnail_url()) echo get_the_post_thumbnail_url() ?>');"></div>
 					</div>
 				  </a>
 				  <div class="summary">
