@@ -1,7 +1,7 @@
 <nav id="menu" class="el-init el-show-complete">
   <div id="menu-bar" class="el-init el-show-complete" el-id="menu-bar" style="visibility: visible;">
     <a id="menu-bar__boffi-logo" href="/" internal-route="" style="">
-      <img src="/wp-content/themes/MEnet-wp/static/img/logomobile.jpeg" style="height: 20px; width: 20px">
+      <img src="/wp-content/themes/MEnet-wp/static/img/logo.jpg" style="height: 20px; width: 20px">
     </a>
     <div id="hamburger-btn" class="" style="">
       <i class="fas fa-angle-up"></i>
@@ -180,13 +180,13 @@ Contract</a>
         <div class="collapse navbar-collapse show" id="navbarResponsive">
           <ul id="menu-top-central" class="menu horizontal uppercase" style="visibility: visible;">
             <li id="menu-item-24890" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-24890">
-              <a href="/ideas/" data-menu-index="0" class="no-barba"><span class='hidden ideasFull Your'>Your</span><span class="redden">Ideas</span><span class='hidden ideasFull arevalidones'>&nbsp;are&nbsp;valid&nbsp;ones</span></a>
+              <a href="/ideas/" data-menu-index="0" class="no-barba"><span class='hidden ideasFull Your'>Your</span><span class="redden Ideas">Ideas</span><span class='hidden ideasFull arevalidones'>&nbsp;are&nbsp;valid&nbsp;ones</span></a>
             </li>
             <li id="menu-item-24892" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-24892">
-              <a href="/menet/" data-menu-index="1" class="no-barba"><span class='hidden blogFull Inside'>Inside</span><span class="redden"><span class="ME">ME</span>&nbsp;&nbsp;net</span><span class='hidden blogFull Working'>Working</span></a>
+              <a href="/menet/" data-menu-index="1" class="no-barba"><span class='hidden blogFull Inside'>Inside</span><span class="redden MEnet"><span class="ME">ME</span>&nbsp;&nbsp;net</span><span class='hidden blogFull Working'>Working</span></a>
             </li>
             <li id="menu-item-24896" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-24896">
-              <a href="/projects/" data-menu-index="2" class="no-barba"><span></span><span class="redden">Projects</span> <span class='hidden projectsFull todiscover'>to&nbsp;discover</span></a>
+              <a href="/projects/" data-menu-index="2" class="no-barba"><span></span><span class="redden Projects">Projects</span> <span class='hidden projectsFull todiscover'>to&nbsp;discover</span></a>
             </li>
           </ul>
         </div>
